@@ -22,7 +22,9 @@ theme:
   logo: "assets/images/logo.png"
 nav:
   - Página principal: index.md
-  
+  - Unidad 1 - Caracterización de las redes de comunicación:
+    - Teoría UD1: ud1.md
+    - Práctica 1.1: pr1.1.md  
 
 copyright: "2025 José María Pérez Puentes - Licencia CC BY-NC-SA 4.0"
 
