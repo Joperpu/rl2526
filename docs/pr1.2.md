@@ -1,4 +1,4 @@
-# Práctica 1.2 - La comunicación y las redes de comunicación
+# Práctica 1.2 - La comunicación y las redes de comunicación (entregable)
 
 ## Ejercicios
 
@@ -67,3 +67,13 @@
 	- ¿Qué tipo de medio de transmisión debería utilizarse? Justifica tu elección.
 	- Sugiere una topología de red adecuada y explica sus ventajas en este contexto.
 	- Investiga qué medidas de seguridad deberían implementarse para proteger la red universitaria.
+
+## Criterios de calificación
+
+Esta práctica evalúa todos los criterios de evaluación del **RA1**.
+
+## Entrega
+
+Deberás realizar todos los ejercicios en un único archivo PDF que tendrás que subir al apartado correspondiente de la plataforma Moodle Centros. Nombra el archivo de la siguiente forma:
+
+Apellido1Apellido2_Nombre_RL_UD1_P1.pdf

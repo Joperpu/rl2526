@@ -221,6 +221,38 @@ La topología celular es un modelo utilizado principalmente en redes de comunica
     * Internet de las Cosas (IoT): Conectividad para dispositivos y sensores distribuidos en áreas amplias.
     * Comunicaciones de Emergencia: Redes dedicadas para servicios de seguridad pública y respuesta a emergencias.
 
+## Medida de la información
+
+### Unidades de medida de la información
+
+El bit es la unidad mínima de información empleada en informática, en cualquier dispositivo digital. Con él, podemos representar dos valores cuales quiera, como verdadero o falso, abierto o cerrado, blanco o negro, norte o sur, masculino o femenino, rojo o azul, etc. Basta con asignar uno de esos valores al estado de “apagado” (0), y el otro al estado de “encendido” (1).
+
+El tamaño de ficheros y archivos se suele expresar en bytes y sus múltiplos. Los bytes se suelen expresar utilizando la b mayúscula (B).
+
+Hay que tener en cuenta que **1 byte = 8 bits**, por lo que:
+
+| Unidad | Equivalencia en la anterior |
+| -- | -- |
+| 1 bit | - |
+| 1 Byte (B) | 8 bits |
+| 1 KB | 1024 B |
+| 1 MB | 1024 KB |
+| 1 GB | 1024 MB |
+| 1 TB | 1024 GB |
+| 1 PB | 1024 TB |
+
+### Unidades de medida de velocidad de transferencia de información
+
+La velocidad de transferencia de información se suele expresar en bps (bits por segundo) o b/s, en una transmisión de datos, es el número de impulsos elementales (1 ó 0) transmitidos en cada segundo. Hay que tener en cuenta que:
+
+| Unidad | Equivalencia en la anterior |
+| -- | -- |
+| 1 Kbps | 1000bps |
+| 1 Mbps | 1000kps |
+| 1 Gbps | 1000Mbps |
+
+Cuando se quiere expresar la velocidad de transmisión que soporta un canal de transmisión se utilizan los bps y sus múltiplos, pero cuando las herramientas y programas muestran la velocidad a la que se está transfiriendo un archivo concreto lo suelen hacer en B/s (Bps) o en alguno de sus múltiplos (KB/s, MB/s, GB/s, etc).
+
 ## Sistemas de numeración
 
 Un sistema de numeración es un conjunto de reglas, convenios y símbolos combinados con palabras que nos permiten expresar verbal y gráficamente los números.
