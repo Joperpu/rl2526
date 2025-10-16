@@ -6,8 +6,6 @@ Descarga el [siguiente guión](assets/pr2.5.pdf) de implementación de una red c
 
 ## Entrega
 
-## Entrega
-
 Crea un documento PDF, a partir de un Word o Google Docs, con las siguientes consideraciones:
 
 - El nombre del archivo a entregar en la plataforma Moodle Centros debe tener el siguiente formato: `Apellido1Apellido2_Nombre_RL_UD2_P5.pdf`.
