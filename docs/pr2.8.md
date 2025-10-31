@@ -44,9 +44,10 @@ Hay que evitar, por tanto, los dominios de colisión, y dentro de ellos, mejor q
 Grupo de dispositivos de la red que envían y reciben mensajes de difusión entre ellos. Una cantidad inapropiada de estos mensajes de difusión (broadcast) provocara un bajo rendimiento en la red, una cantidad exagerada (tormenta de broadcast) dará como resultado el mal funcionamiento de la red hasta tal punto de poder dejarla completamente congestionada.
 
 ### Hubs
+
 El hub fue el primer dispositivo central de la topología en estrella. Recibe datos y los hace llegar a todos los dispositivos que tiene conectados (hosts), lo hace transmitiendo en modo semidúplex (ambas direcciones, pero no a la misma vez).
 
-Los hubs o concentradores tienen un único dominio de colisión que incluye todos los dispositivos de red conectados. Eso quiere decir que si dos equipos provocan una colisión en un segmento asociado a un puerto del hubs, todos los demás dispositivos aun estando en diferentes puertos se verán afectados. De igual manera se verían afectados si una estación envía un broadcast, debido a que un hub también tiene un solo dominio de difusión. 
+Los hubs o concentradores tienen un único dominio de colisión que incluye todos los dispositivos de red conectados. Eso quiere decir que si dos equipos provocan una colisión en un segmento asociado a un puerto del hub, todos los demás dispositivos aun estando en diferentes puertos se verán afectados. De igual manera se verían afectados si una estación envía un broadcast, debido a que un hub también tiene un solo dominio de difusión. 
 
 
 ### Ping entre dos host dentro de la misma red local
@@ -54,17 +55,17 @@ Los hubs o concentradores tienen un único dominio de colisión que incluye todo
 Cuando la comunicación se realiza entre dos hosts de la misma red la puerta de enlace no se ve involucrada. Supongamos un ping entre dos equipos de una LAN:
 
 - El equipo emisor del ping detecta que el destino está dentro de la misma red. Lo averigua mediante  operaciones binarias:
-    - AND(IP_destino, Máscara) 
-    - AND(IP_origen, Máscara)
-    - Si coinciden con la dirección de red del equipo local significa que están en la misma red IP o red lógica
+    - AND(IP_destino, Máscara).
+    - AND(IP_origen, Máscara).
+    - Si coinciden con la dirección de red del equipo local significa que están en la misma red IP o red lógica.
 - El ICMP (capa de red) solicita a la capa inferior que envíe la trama. Se necesita la MAC de destino para encapsular la trama. Si no se tiene (no aparece en arp -a) se usa el protocolo ARP.
-- El protocolo ARP 
-    - Origen: pregunta a toda la red (request IP)
+- El protocolo ARP.
+    - Origen: pregunta a toda la red (request IP).
     - Destino: contesta con su dirección MAC. 
-    - Origen: Se actualiza la tabla de MACs del origen
+    - Origen: Se actualiza la tabla de MACs del origen.
 - Ya con la MAC destino:
-    - echo request se encapsula en la trama
-    - echo reply vuelve
+    - echo request se encapsula en la trama.
+    - echo reply vuelve.
 
 ### Ejercicio 2
 
@@ -72,17 +73,15 @@ Responde a las siguientes preguntas y documenta aquello que sea necesario. Utili
 
 ![Escenario de Cisco Packet Tracer](assets/images/ud2/img30.png)
 
-1. Realiza el Packet Tracer del escenario que se muestra (lo entregarás cuando finalices la tarea). La dirección de red es la 10.0.0.0/8, y las IPs de los distintos dispositivos son consecutivas desde la primera disponible.
+1. Realiza el Packet Tracer del escenario que se muestra. La dirección de red es la 10.0.0.0/8, y las IPs de los distintos dispositivos son consecutivas desde la primera disponible.
 2. Crea una PDU simple que envía un ping del PC de la izquierda al de la derecha. Usa el icono "Add Simple PDU" (el sobre cerrado) arriba a la izquierda. Pincha primero en el origen y después en el destino del ping.
 3. Usa arp -d para limpiar la cache de las resoluciones arp del equipo origen. Así nos aseguramos de que se va a preguntar a toda la red por la MAC del equipo destino.
-4. Entra en el modo simulación, limpia todos los protocolos y añade sólo los protocolos ARP e ICMP.
-5. ¿Cuál es el dominio de difusión o de broadcast en el escenario? Envía una captura de pantalla de Cisco Packet Tracer que lo demuestre e indica el protocolo que lo usa y para qué.
-6. Indica el escenario y la trama donde se realiza la resolución ARP. En el modelo OSI marca la capa donde se realiza y captura de pantalla. Indica:
+4. Indica dónde se realiza la resolución ARP:
     - Capa donde se realiza la resolución ARP.
     - Dirección IP por la que se preguntaba.
     - Dirección MAC devuelta.
-7. Nada más solucionarse el problema de la MAC mediante el broadcast, ¿cuál es la siguiente trama que se envía?
-8. Repite la simulación. Ya no se realizará el broadcast. Explica por qué.
+5. Nada más solucionarse el problema de la MAC mediante el broadcast, ¿cuál es la siguiente trama que se envía?
+6. Repite la simulación. Ya no se realizará el broadcast. Explica por qué.
 
 ## Entrega
 
