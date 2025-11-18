@@ -17,113 +17,7 @@ Alrededor de esta ley se desarrollan una serie de reglamentos que concretan sus 
 - **Real Decreto 773/1997**, sobre **equipos de protección individual (EPI)**, que fija las condiciones para la elección, uso y mantenimiento de los EPIs.
 - Otros reales decretos regulan aspectos más específicos (por ejemplo, el riesgo eléctrico o la utilización de equipos de trabajo), pero en el contexto de redes locales, los anteriores constituyen el núcleo de lo que se debe conocer.
 
-Es importante remarcar que esta normativa es **de aplicación general**, es decir, afecta tanto a grandes empresas como a pequeños talleres, centros educativos con aulas-taller y empresas de instalación y mantenimiento de redes.
-
-### Finalidad y principios de la Ley 31/1995
-
-La Ley 31/1995 tiene como finalidad **promover la seguridad y la salud de los trabajadores** mediante la aplicación de una serie de principios generales de acción preventiva: 
-
-- Evitar los riesgos siempre que sea posible.  
-- Evaluar los riesgos que no se puedan evitar.  
-- Combatir los riesgos en su origen (por ejemplo, rediseñando el puesto de trabajo o la instalación).  
-- Adaptar el trabajo a la persona, teniendo en cuenta aspectos ergonómicos y organizativos.  
-- Sustituir lo peligroso por lo que entrañe poco o ningún peligro.  
-- Planificar la prevención, integrándola en todos los niveles de la empresa.  
-- Informar y formar a los trabajadores sobre los riesgos y las medidas preventivas.  
-- Considerar las nuevas tecnologías y la evolución técnica para mejorar las condiciones de seguridad.
-
-Estos principios explican por qué **no basta con entregar un casco o unos guantes**, sino que la empresa está obligada a organizar el trabajo de forma que el riesgo se reduzca desde el diseño de las tareas, las instalaciones y los procedimientos.
-
-En el ámbito de las redes locales, esto se traduce en decisiones como: diseñar recorridos de cableado que no crucen zonas de paso, prever bandejas y canaletas adecuadas, instalar protecciones eléctricas suficientes o establecer procedimientos claros para trabajar en altura con escaleras.
-
-### Derechos y deberes de trabajadores y empresa
-
-La normativa de prevención de riesgos laborales establece una relación equilibrada entre **derechos del trabajador** y **obligaciones del empresario**, y también fija obligaciones específicas para los trabajadores. 
-
-#### Derechos del trabajador
-
-Todo trabajador tiene derecho a:
-
-- **Una protección eficaz** en materia de seguridad y salud en el trabajo.  
-- **Recibir información** sobre los riesgos del puesto y las medidas preventivas aplicables.  
-- **Recibir formación** teórica y práctica suficiente y adecuada en prevención.  
-- **Ser consultado y participar** en las cuestiones relacionadas con la prevención (delegados de prevención, comités de seguridad y salud).  
-- **Interrumpir su actividad** y abandonar el puesto de trabajo si considera que existe un riesgo grave e inminente para su vida o su salud.  
-- **Vigilancia periódica de la salud**, en función de los riesgos a los que esté expuesto.
-
-En el contexto del módulo de redes locales, estos derechos se reflejan, por ejemplo, en la obligación de la empresa de explicar los riesgos del trabajo con tensión eléctrica, el uso de escaleras, el manejo de herramientas de corte o el trabajo prolongado en posturas forzadas.
-
-#### Obligaciones del empresario
-
-El empresario asume un **deber general de protección**. 
-
-- Realizar una **evaluación inicial de riesgos** y actualizarla cuando cambien las condiciones de trabajo.  
-- Elaborar y aplicar un **plan de prevención de riesgos laborales**, integrando la prevención en la organización y en todos los procesos.  
-- Planificar la actividad preventiva (medidas técnicas, organizativas, formativas, de emergencia, etc.).  
-- Proporcionar **equipos de trabajo seguros** y mantenerlos en condiciones adecuadas.  
-- Facilitar **EPIs adecuados** y asegurarse de su utilización correcta, sin coste para el trabajador.  
-- Informar y formar a los trabajadores en materia de prevención.  
-- Investigar los accidentes y enfermedades profesionales para evitar su repetición.  
-
-Para una empresa de instalación de redes, esto significa, por ejemplo, que debe haber una evaluación de riesgos específica de trabajos en altura, manipulación de cables y equipos, uso de taladros, etc., así como instrucciones claras y formación sobre cómo realizar estas tareas de forma segura.
-
-#### Obligaciones de los trabajadores
-
-Los trabajadores también tienen responsabilidades en materia de prevención. La ley les exige:
-
-- **Usar adecuadamente** las máquinas, herramientas, equipos y sustancias.  
-- **Utilizar correctamente los EPIs** facilitados por el empresario y según las instrucciones recibidas.  
-- No inutilizar ni manipular de forma incorrecta los **dispositivos de seguridad** instalados en máquinas, equipos o instalaciones.  
-- Comunicar inmediatamente cualquier situación de riesgo que detecten.  
-- Cooperar con el empresario para que éste pueda garantizar unas condiciones de trabajo seguras.
-
-En el aula-taller, esto implica, por ejemplo, que el alumnado debe usar las gafas, guantes o calzado de seguridad cuando se les indiquen, no retirar protecciones de máquinas, no dejar cables desordenados por el suelo y avisar al profesor si se detecta un enchufe deteriorado o una escalera en mal estado.
-
-### Reglamento de los Servicios de Prevención (RD 39/1997)
-
-El **Real Decreto 39/1997** desarrolla la Ley 31/1995 y establece cómo debe organizarse la actividad preventiva en las empresas. Su objetivo es integrar la prevención en el conjunto de actividades y decisiones de la empresa mediante un **sistema planificado y documentado**. 
-
-Entre los aspectos más relevantes para el alumnado destacan:
-
-- La empresa debe disponer de una **modalidad preventiva**: servicio de prevención propio, ajeno, mancomunado o trabajadores designados.  
-- Debe existir un **Plan de prevención de riesgos laborales**, que incluya la política preventiva, la organización de la prevención y los recursos asignados.  
-- Es obligatoria una **evaluación de riesgos** de todos los puestos de trabajo y tareas.  
-- Debe haber una **planificación de la actividad preventiva**, con medidas, plazos y responsables.  
-- Se exige una **documentación mínima** (plan, evaluaciones, planificación, formación, información, controles de equipos, investigaciones de accidentes, etc.) que permite demostrar que la empresa integra la prevención en su gestión.
-
-En el campo de las redes locales, esto se traduce en que las tareas de instalación en oficinas, centros de datos, aulas o naves industriales deben estar recogidas en la evaluación de riesgos y en los procedimientos de trabajo seguro de la empresa.
-
-### Normas específicas que afectan al trabajo en redes locales
-
-Además de la LPRL y el Reglamento de los Servicios de Prevención, existen reglamentos que inciden directamente en las condiciones en las que se realiza el trabajo de montaje y mantenimiento de redes.
-
-#### RD 486/1997: condiciones de los lugares de trabajo
-
-El **Real Decreto 486/1997** establece las disposiciones mínimas de seguridad y salud aplicables a los lugares de trabajo. Define qué requisitos deben cumplir las zonas en las que los trabajadores permanecen o a las que acceden por razón de su actividad: condiciones constructivas, estabilidad, orden y limpieza, señalización, instalaciones de servicio, condiciones ambientales (temperatura, ventilación), iluminación, servicios higiénicos y locales de descanso. 
-
-En el contexto de redes locales, este real decreto afecta a:
-
-- El estado del aula-taller o sala de servidores (suelo, pasillos, accesos, puertas de emergencia).  
-- El **orden y limpieza** en el tendido de cables y ubicación de herramientas.  
-- La **iluminación suficiente** en zonas donde se trabaja con cableado, racks y paneles de parcheo.  
-- La **temperatura y ventilación** en salas de equipos, donde los dispositivos generan calor.  
-- La presencia de **señalización de seguridad** (salidas de emergencia, extintores, etc.).
-
-#### RD 773/1997: equipos de protección individual
-
-El **Real Decreto 773/1997** fija las disposiciones mínimas de seguridad y salud relativas a la utilización de los equipos de protección individual. Establece que los EPIs deben proporcionar una protección eficaz frente a los riesgos que motivan su uso, sin causar riesgos adicionales ni molestias innecesarias, y deben responder a las condiciones del lugar de trabajo y a las características del trabajador.
-
-Aspectos clave:
-
-- El empresario debe seleccionar los EPIs en función de los riesgos identificados en la evaluación de riesgos.  
-- Los EPIs deben ir **marcados y certificados** según la normativa vigente.  
-- Se debe informar y formar a los trabajadores sobre cómo usar, conservar y mantener los EPIs.  
-- El coste de los EPIs **no puede recaer en el trabajador**.  
-- Debe garantizarse su sustitución cuando estén deteriorados o hayan perdido eficacia.
-
-En instalaciones de redes, algunos ejemplos de EPIs asociados a la normativa son: calzado de seguridad, gafas de protección, guantes adecuados al riesgo, casco en trabajos de altura o en determinadas obras y, en algunos casos, protectores auditivos si se trabaja en entornos ruidosos.
-
-La normativa de prevención de riesgos laborales **no es un conjunto de normas aisladas**, sino un sistema coherente que obliga a planificar, organizar y documentar la prevención, y que afecta directamente a cómo se diseñan y ejecutan las tareas de montaje y mantenimiento de redes locales.
+Es importante remarcar que esta normativa es **de aplicación general**, es decir, afecta tanto a grandes empresas como a pequeños talleres y empresas de instalación y mantenimiento de redes.
 
 ## Identificación de riesgos en redes locales
 
@@ -251,8 +145,6 @@ La experiencia en talleres y empresas de instalación muestra que la mayoría de
 - Subir a sillas o mesas en lugar de usar escaleras.  
 - Manipular equipos sin haber recibido formación suficiente.  
 
-Comprender estas causas permite al alumnado **reflexionar sobre su propia conducta preventiva**, fomentando la responsabilidad individual y colectiva en el aula-taller.
-
 ### Evaluación de riesgos: probabilidad y gravedad
 
 La evaluación de riesgos consiste en **valorar la probabilidad** de que ocurra un accidente y **la gravedad** del daño que podría causar.  
@@ -267,17 +159,6 @@ La evaluación de riesgos consiste en **valorar la probabilidad** de que ocurra 
 
 Combinando ambos factores se obtiene el **nivel de riesgo**, que puede representarse en una matriz de evaluación (bajo, medio, alto). Este análisis orienta las decisiones sobre qué medidas deben aplicarse con prioridad.
 
-
-### Importancia de la identificación de riesgos en la formación profesional
-
-En el ámbito de la formación profesional, la identificación de riesgos no solo tiene una función preventiva, sino también **formativa**. El alumnado aprende a observar el entorno, anticiparse a los problemas y aplicar la normativa con criterio técnico. Esta actitud es esencial en su futura vida laboral, donde deberá:
-
-- Evaluar entornos de trabajo diversos (oficinas, naves, centros educativos, locales comerciales).  
-- Coordinar con otros profesionales (electricistas, técnicos de climatización, pintores, etc.).  
-- Adaptarse a instalaciones preexistentes, detectando posibles deficiencias o riesgos.  
-
-Por tanto, la identificación de riesgos constituye el **punto de partida** de todo procedimiento de montaje o mantenimiento en redes locales.
-
 ## Medidas preventivas y de seguridad
 
 Una vez identificados los riesgos en el montaje y mantenimiento de redes locales, el siguiente paso consiste en **adoptar las medidas preventivas** necesarias para eliminar o reducir la probabilidad de accidentes. Estas medidas forman parte de la **planificación preventiva**, que debe integrarse desde la fase de diseño de la instalación hasta el mantenimiento y revisión de los equipos.
@@ -286,7 +167,6 @@ La prevención se fundamenta en dos principios básicos:
 
 1. **Actuar antes de que ocurra el accidente**, anticipando las situaciones de riesgo.  
 2. **Combinar la protección colectiva y la individual**, priorizando siempre la eliminación del riesgo en el origen.
-
 
 ### Tipos de medidas preventivas
 
@@ -397,41 +277,11 @@ Aunque la prevención busca evitar que se produzcan accidentes, también es esen
 - Esperar a los servicios de emergencia y mantener la calma.  
 - Comunicar el suceso a la dirección del centro o empresa.
 
-El aula-taller debe disponer de un **botiquín accesible y revisado periódicamente**, y todos los alumnos deben conocer la ubicación de las **salidas de emergencia** y **extintores**.
-
-### Cultura preventiva y responsabilidad compartida
-
-La prevención de riesgos laborales no depende únicamente de la existencia de normas o equipos; requiere una **cultura preventiva**, entendida como el conjunto de valores, actitudes y comportamientos que priorizan la seguridad por encima de la comodidad o la rapidez.
-
-Fomentar esta cultura implica:
-
-- Adoptar **hábitos seguros** en todas las actividades.  
-- Respetar los procedimientos aunque parezcan innecesarios.  
-- Cooperar con los compañeros para mantener el orden y la seguridad.  
-- Comunicar sin miedo cualquier situación peligrosa.  
-- Recordar que **la seguridad es tarea de todos**.
-
-En el contexto educativo, la cultura preventiva se construye desde la práctica diaria: cada vez que un alumno ordena su puesto, utiliza correctamente una herramienta o ayuda a un compañero, está aplicando los principios de la prevención.
-
 ## Equipos de Protección Individual (EPI)
 
 Los **Equipos de Protección Individual (EPI)** son el último recurso de la cadena preventiva. Su función es **proteger al trabajador frente a los riesgos** que no pueden eliminarse por medios técnicos u organizativos. En el ámbito del montaje y mantenimiento de redes locales, los EPIs son esenciales para evitar lesiones causadas por cortes, caídas, descargas eléctricas, proyecciones o exposición al polvo.
 
 El uso adecuado de los EPIs no sustituye a las medidas colectivas ni a la planificación preventiva, pero constituye una **barrera de seguridad personal** indispensable cuando se trabaja con herramientas, electricidad o equipos informáticos en entornos reales o en el aula-taller.
-
-### Definición legal y normativa aplicable
-
-Según el **Real Decreto 773/1997**, se considera EPI a cualquier equipo destinado a ser llevado o sujetado por el trabajador para que le proteja de uno o varios riesgos que puedan amenazar su seguridad o su salud, así como cualquier complemento o accesorio destinado a tal fin.
-
-La empresa (o, en el contexto educativo, el centro formativo) está obligada a:
-
-- **Seleccionar los EPIs adecuados** en función de los riesgos identificados.  
-- **Proporcionarlos gratuitamente** a los trabajadores o alumnos.  
-- **Garantizar su mantenimiento, limpieza y sustitución** cuando sea necesario.  
-- **Formar e informar** sobre su uso correcto.  
-- **Vigilar su utilización efectiva** durante la realización de las tareas.
-
-Los EPIs deben cumplir las normas de calidad y seguridad establecidas por la Unión Europea y estar identificados con el **marcado CE**, que certifica que el producto ha superado los ensayos reglamentarios.
 
 ### Clasificación de los EPIs
 
@@ -498,26 +348,7 @@ Buenas prácticas de conservación:
 - No compartir EPIs de uso personal como guantes o protectores auditivos.  
 - Mantener actualizada la ficha de control o registro de uso.
 
-### Obligaciones y responsabilidades en el uso de EPIs
-
-El Real Decreto 773/1997 asigna responsabilidades concretas tanto a la empresa como al trabajador:
-
-- **El empresario (o centro educativo)** debe:
-  - Proporcionar los EPIs adecuados sin coste para el usuario.  
-  - Garantizar su mantenimiento, reposición y limpieza.  
-  - Formar a los trabajadores o alumnos en su uso correcto.  
-  - Asegurar que los EPIs se utilizan efectivamente durante la tarea.  
-
-- **El trabajador o alumno** debe:
-  - Usar correctamente los EPIs en todas las situaciones que lo requieran.  
-  - Cuidar y conservar los equipos asignados.  
-  - Comunicar cualquier defecto o pérdida de eficacia.  
-  - No alterar ni manipular los EPIs.  
-  - Cumplir las instrucciones del fabricante y del responsable de seguridad.
-
-El incumplimiento de estas obligaciones puede tener consecuencias disciplinarias y, en el ámbito profesional, incluso legales, ya que el uso de los EPIs es una **obligación reglamentaria**.
-
-### Ejemplos de aplicación en nuestro caso
+### Ejemplos de aplicación
 
 El siguiente cuadro muestra ejemplos concretos de tareas habituales en el módulo de redes locales y los EPIs recomendados:
 
@@ -531,12 +362,6 @@ El siguiente cuadro muestra ejemplos concretos de tareas habituales en el módul
 | Limpieza o mantenimiento | Polvo, posturas forzadas | Mascarilla, ropa ajustada |
 
 Este tipo de tabla puede utilizarse como **guía de referencia rápida** en el taller, ayudando al alumnado a asociar cada tarea con su equipo de protección correspondiente.
-
-### Cultura del uso del EPI
-
-El uso del EPI no debe percibirse como una obligación impuesta, sino como una **manifestación de profesionalidad y responsabilidad**. Los técnicos en redes locales trabajan frecuentemente en espacios ajenos —oficinas, colegios, industrias— donde deben proyectar una imagen de seguridad, limpieza y orden.  
-
-Usar el EPI correctamente demuestra respeto por la seguridad propia, por la de los compañeros y por la de los clientes. La prevención es, en última instancia, una actitud: quien incorpora el uso del EPI a su rutina laboral demuestra que ha interiorizado la **cultura preventiva**.
 
 ## Seguridad en el uso de herramientas y máquinas
 
@@ -708,7 +533,7 @@ En el contexto de redes locales, mantener el orden implica:
 
 ### Principios del orden en el aula-taller
 
-El aula-taller de redes debe organizarse aplicando criterios de **orden funcional**. Cada elemento (herramienta, material o equipo) debe tener un lugar asignado y debe ser devuelto al finalizar su uso.
+El taller de redes debe organizarse aplicando criterios de **orden funcional**. Cada elemento (herramienta, material o equipo) debe tener un lugar asignado y debe ser devuelto al finalizar su uso.
 
 #### Normas básicas de orden
 
@@ -719,8 +544,6 @@ El aula-taller de redes debe organizarse aplicando criterios de **orden funciona
 5. **Asignar zonas de trabajo** delimitadas para cada grupo de alumnos.  
 6. **Mantener despejadas las rutas de paso** y salidas de emergencia.  
 7. **Comprobar el estado del suelo** y limpiar si hay polvo, restos o líquidos.  
-
-Un aula ordenada refleja disciplina y respeto por el trabajo. El desorden, en cambio, denota improvisación y descuido, y es fuente habitual de accidentes menores.
 
 ### La limpieza como elemento preventivo
 
@@ -757,13 +580,6 @@ La **ergonomía** estudia la relación entre el trabajador y su entorno, con el 
 5. **Descansos activos:** realizar estiramientos y pausas breves cada cierto tiempo.  
 6. **Iluminación correcta:** luz suficiente sin deslumbramientos ni reflejos.  
 
-#### Ejemplos en el aula-taller
-
-- Al instalar canaletas cerca del suelo, agacharse doblando las rodillas, no la espalda.  
-- Al trabajar con el ordenador, mantener la pantalla a la altura de los ojos.  
-- Evitar levantar bobinas o racks pesados sin ayuda o sin doblar las rodillas.  
-- Usar taburetes o plataformas cuando sea necesario trabajar en altura prolongada.
-
 ### Manipulación manual de cargas
 
 En la instalación de redes es frecuente levantar cajas de cable, armarios de comunicaciones o bobinas. Una manipulación incorrecta puede provocar **lumbalgias, hernias discales o lesiones musculares**.
@@ -799,19 +615,6 @@ Las condiciones ambientales del aula o del lugar de trabajo influyen directament
 - Debe garantizar la renovación del aire y la eliminación del polvo.  
 - Las salas con equipos informáticos necesitan ventilación forzada o climatización específica.
 
-El **Real Decreto 486/1997** establece estas condiciones como **requisitos mínimos de los lugares de trabajo**.
-
-### Orden, limpieza y ergonomía como cultura preventiva
-
-Mantener el orden y cuidar la postura no son tareas puntuales, sino **hábitos profesionales** que reflejan la actitud del trabajador frente a la seguridad. Un técnico que recoge sus herramientas, organiza su espacio y cuida su postura está aplicando, de forma natural, los principios básicos de la prevención.
-
-Fomentar esta cultura preventiva en el aula implica:
-
-- Asignar responsabilidades dentro de cada grupo.  
-- Supervisar el estado del puesto al final de cada práctica.  
-- Valorar el orden y la limpieza como parte de la nota.  
-- Realizar ejercicios de concienciación sobre ergonomía.
-
 ## Orden, limpieza y ergonomía en el trabajo
 
 El **orden, la limpieza y la ergonomía** son tres pilares fundamentales de la seguridad laboral. A menudo se subestiman por considerarse aspectos secundarios, pero en realidad constituyen el **primer nivel de prevención**. Un espacio de trabajo limpio, ordenado y adaptado a las características físicas del trabajador reduce drásticamente los accidentes y mejora la eficiencia en las tareas.
@@ -830,14 +633,6 @@ El **orden** consiste en disponer los elementos del trabajo de manera lógica y 
 - Aumentan la **eficiencia** y reducen el tiempo de trabajo.  
 - Favorecen una **actitud responsable y profesional**.  
 - Mejoran el **ambiente de trabajo** y la concentración.  
-
-En el contexto de redes locales, mantener el orden implica:
-
-- No dejar cables por el suelo o en zonas de paso.  
-- Guardar las herramientas en su sitio tras cada uso.  
-- Mantener los paneles de parcheo y racks sin polvo ni restos.  
-- Desechar correctamente los recortes de cable, bridas o canaletas.  
-- Revisar periódicamente el estado de los equipos y su limpieza.
 
 ### Principios del orden en el aula-taller
 
@@ -921,19 +716,6 @@ Las condiciones ambientales del aula o del lugar de trabajo influyen directament
 - Debe garantizar la renovación del aire y la eliminación del polvo.  
 - Las salas con equipos informáticos necesitan ventilación forzada o climatización específica.
 
-El **Real Decreto 486/1997** establece estas condiciones como **requisitos mínimos de los lugares de trabajo**.
-
-### Orden, limpieza y ergonomía como cultura preventiva
-
-Mantener el orden y cuidar la postura no son tareas puntuales, sino **hábitos profesionales** que reflejan la actitud del trabajador frente a la seguridad. Un técnico que recoge sus herramientas, organiza su espacio y cuida su postura está aplicando, de forma natural, los principios básicos de la prevención.
-
-Fomentar esta cultura preventiva en el aula implica:
-
-- Asignar responsabilidades dentro de cada grupo.  
-- Supervisar el estado del puesto al final de cada práctica.  
-- Valorar el orden y la limpieza como parte de la nota.  
-- Realizar ejercicios de concienciación sobre ergonomía.
-
 ## Protección ambiental y gestión de residuos
 
 El montaje y mantenimiento de redes locales no solo implica cumplir las normas de seguridad laboral, sino también las de **protección ambiental**. Cada actuación técnica genera residuos —cables, envoltorios, restos plásticos, equipos electrónicos— que deben gestionarse correctamente para **evitar la contaminación del entorno y el despilfarro de recursos naturales**.
@@ -954,17 +736,7 @@ A estos tres principios se añaden dos más:
 - **Recuperar:** aprovechar los recursos contenidos en los residuos (metales, plásticos, componentes).  
 - **Reparar:** prolongar la vida útil de los equipos y materiales antes de desecharlos.
 
-Estos principios conforman la conocida **“regla de las 5R”**, que resume el enfoque sostenible que debe aplicarse también en los talleres y empresas del ámbito de las telecomunicaciones.
-
-### Legislación y normativa ambiental
-
-La legislación española y europea regula de manera específica la gestión de residuos eléctricos, electrónicos y peligrosos. Las normas más relevantes son:
-
-- **Ley 7/2022, de residuos y suelos contaminados para una economía circular:** regula la producción y gestión de residuos en España, promoviendo la prevención y el reciclaje.  
-- **Real Decreto 110/2015, sobre residuos de aparatos eléctricos y electrónicos (RAEE):** establece las obligaciones de recogida y tratamiento de equipos informáticos, cables, routers, switches, etc.  
-- **Directiva Europea 2012/19/UE (RAEE):** armoniza la gestión de estos residuos en la Unión Europea.  
-- **Ley 26/2007, de Responsabilidad Medioambiental:** obliga a reparar los daños causados al entorno por actividades profesionales.  
-- **Ley 21/2013, de Evaluación Ambiental:** promueve la integración de la protección ambiental en todas las fases de la actividad técnica.  
+Estos principios conforman la conocida **“regla de las 5R”**, que resume el enfoque sostenible que debe aplicarse también en los talleres y empresas del ámbito de las telecomunicaciones. 
 
 ### Fuentes de contaminación en redes locales
 
@@ -1034,78 +806,3 @@ Los **RAEE** (Residuos de Aparatos Eléctricos y Electrónicos) son una categor�
 5. **Tratamiento y eliminación final:** según la normativa vigente.  
 
 En los centros educativos, los RAEE generados durante las prácticas deben entregarse al **servicio municipal de recogida** o almacenarse temporalmente hasta su retirada, siguiendo las directrices del responsable ambiental del centro.
-
-### Ahorro energético y sostenibilidad
-
-La eficiencia energética es otro aspecto clave de la protección ambiental. En el ámbito de las redes locales, implica optimizar el uso de los equipos y reducir el consumo innecesario de electricidad.
-
-#### Medidas recomendadas
-
-- Apagar los ordenadores y equipos cuando no se estén utilizando.  
-- Usar regletas con interruptor para desconectar varios dispositivos a la vez.  
-- Sustituir bombillas convencionales por **iluminación LED**.  
-- Configurar los equipos de red en **modo ahorro de energía**.  
-- Promover el uso de **equipos certificados Energy Star**.  
-- Fomentar el uso de recursos digitales (manuales, documentación) para reducir el consumo de papel.  
-
-Estas acciones, además de reducir el impacto ambiental, **disminuyen los costes energéticos** y transmiten al alumnado valores de responsabilidad ecológica y profesionalidad.
-
-### Actitud profesional y responsabilidad ambiental
-
-La protección ambiental no depende únicamente de la normativa, sino también de la **conciencia y compromiso personal**. En el entorno laboral, el técnico en redes debe adoptar una actitud responsable y ejemplar en su relación con el medio ambiente.
-
-Buenas prácticas profesionales:
-
-- Mantener el aula o taller en perfecto estado al finalizar la jornada.  
-- Informar al responsable si detecta fugas, vertidos o acumulación de residuos.  
-- Promover entre los compañeros el uso responsable de materiales.  
-- Participar en campañas de reciclaje o ahorro energético.  
-- Valorar el impacto ambiental de cada decisión técnica.
-
-El respeto al entorno es parte del **código ético del profesional técnico**, al mismo nivel que la seguridad, la precisión o la calidad del trabajo.
-
-## Conclusión general: Cultura preventiva y respeto ambiental en el ámbito profesional
-
-El cumplimiento de las normas de **prevención de riesgos laborales** y de **protección ambiental** constituye un eje esencial del trabajo profesional en el ámbito de las redes locales. La seguridad y la sostenibilidad no deben entenderse como obligaciones externas, sino como **valores inherentes a la calidad técnica** y al compromiso ético de cada trabajador.
-
-En el entorno educativo, aprender a montar y mantener una red local de forma segura y responsable implica mucho más que dominar las herramientas o conocer la topología de los cables. Significa **interiorizar una actitud preventiva y respetuosa con el entorno**, que acompañará al futuro técnico durante toda su vida profesional.
-
-### La cultura preventiva como competencia profesional
-
-La **cultura preventiva** es el conjunto de conocimientos, hábitos y actitudes que orientan la conducta hacia la seguridad. No se trata únicamente de cumplir normas, sino de actuar siempre con precaución, planificación y sentido común.
-
-Desarrollar esta cultura requiere:
-
-- **Conocimiento técnico:** saber identificar riesgos, elegir los EPI adecuados y aplicar los procedimientos correctos.  
-- **Atención constante:** mantener la concentración y la disciplina durante las tareas.  
-- **Responsabilidad individual:** cuidar de la propia seguridad y de la de los compañeros.  
-- **Trabajo en equipo:** coordinarse para reducir errores y garantizar la protección colectiva.  
-- **Autonomía y profesionalidad:** tomar decisiones seguras sin esperar a una supervisión directa.  
-
-El profesional que trabaja con seguridad demuestra **competencia técnica y madurez laboral**, cualidades muy valoradas en cualquier empresa del sector tecnológico.
-
-### El respeto ambiental como valor añadido en la profesión
-
-La sostenibilidad ambiental se ha convertido en un criterio de calidad y prestigio dentro del ámbito tecnológico. Las empresas demandan técnicos capaces de **combinar eficiencia, seguridad y respeto por el medio ambiente**.
-
-El técnico de redes debe aplicar diariamente hábitos sostenibles:
-
-- Minimizar el uso de materiales y recursos.  
-- Clasificar correctamente los residuos generados.  
-- Reutilizar o reciclar componentes siempre que sea posible.  
-- Seleccionar equipos de bajo consumo energético.  
-- Promover entre sus compañeros y clientes la conciencia ecológica.  
-
-Estas acciones no solo protegen el entorno, sino que **refuerzan la imagen de responsabilidad y excelencia profesional** del técnico, alineándose con los objetivos globales de desarrollo sostenible (ODS 12: Producción y consumo responsables, ODS 13: Acción por el clima).
-
-### Prevención, sostenibilidad y calidad
-
-En la actualidad, los conceptos de **prevención, sostenibilidad y calidad** están estrechamente ligados. Un trabajo no puede considerarse de calidad si no cumple las condiciones de seguridad, ergonomía y respeto ambiental.
-
-La calidad técnica incluye:
-- Una instalación segura, sin riesgos eléctricos ni estructurales.  
-- Un entorno limpio y ordenado tras el trabajo.  
-- Una gestión correcta de los residuos generados.  
-- Un consumo energético responsable.  
-
-Por tanto, **seguridad y calidad** son inseparables: la primera garantiza la integridad de las personas; la segunda, la durabilidad y fiabilidad del resultado técnico.
