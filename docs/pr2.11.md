@@ -17,7 +17,7 @@ Requisitos:
 - La primera IP disponible de la red será asignada a la puerta de enlace predeterminada.
 - Los dos primeros switches segmentarán la red con 5 equipos de escritorio por cada uno de ellos.
 - El tercer switch aunará las conexiones de los switches anteriores, servidores y router.
-- Los servidores de DHCP y Web poseerán las 3 siguientes IP disponibles, en ese orden, y no serán asignadas dinámicamente.
+- Los servidores de DHCP y Web poseerán las 2 siguientes IP disponibles, en ese orden, y no serán asignadas dinámicamente.
 - Los ordenadores de escritorio tendrán IPs estáticas, desde la primera disponible para todos los hosts de la red en adelante, tras la asignación de las IPs anteriores.
 - Los ordenadores portátiles se conectarán a la red a través de su conexión inalámbrica y tendrán IPs dinámicas, que serán asignadas por el servidor de DHCP, no pudiendo encontrarse ninguna de las IPs asignadas anteriormente dentro del rango del DHCP.
 - La página _index.html_ del servidor web mostrará el mensaje "¡Hola 1º de SMR!".
