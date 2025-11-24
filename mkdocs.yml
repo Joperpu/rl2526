@@ -41,9 +41,9 @@ nav:
     - Práctica 2.9: pr2.9.md
     - Práctica 2.10: pr2.10.md
     - Práctica 2.11: pr2.11.md
-  #- Unidad 3 - Prevención de riesgos laborales y de protección ambiental:
-    #- Teoría UD3: ud3.md
-    #- Práctica 3.1: pr3.1.md
+  - Unidad 3 - Prevención de riesgos laborales y de protección ambiental:
+    - Teoría UD3: ud3.md
+    - Práctica 3.1: pr3.1.md
     #- Práctica 3.2: pr3.2.md
 
 copyright: "2025 José María Pérez Puentes - Licencia CC BY-NC-SA 4.0"
