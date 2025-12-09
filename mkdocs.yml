@@ -45,8 +45,9 @@ nav:
     - Teoría UD3: ud3.md
     - Práctica 3.1: pr3.1.md
     - Práctica 3.2: pr3.2.md
-  #- Unidad 4 - Organización física de la redes:
-    #- Teoría UD4: ud4.md
+  - Unidad 4 - Organización física de la redes:
+    - Teoría UD4: ud4.md
+    #- Práctica 4.1: pr4.1.md
 
 copyright: "2025 José María Pérez Puentes - Licencia CC BY-NC-SA 4.0"
 
