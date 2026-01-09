@@ -90,6 +90,6 @@ Esta práctica evalúa todos los criterios de evaluación del **RA2**. Para su c
 
 Documenta todo el proceso con fotografías realizadas por ti, además de escribir el proceso completo que has realizado. Entrega el documento .PDF en el lugar de la plataforma Moodle Centros habilitado para ello, con el siguiente nombre:
 
-**Apellido1Apellido2_Nombre_PAR_UD4_P2.pdf**
+**Apellido1Apellido2_Nombre_RL_UD4_P2.pdf**
 
 Además, el profesor deberá comprobar cuando termines de testear el cable que está correcto.
