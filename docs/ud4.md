@@ -498,3 +498,197 @@ Dependiendo de cómo se organice el envío y la verificación de las tramas, se 
 * **Envío Continuo**: En esta estrategia, el emisor envía múltiples tramas de manera continua sin esperar la confirmación inmediata del receptor para cada una de ellas. Las tramas se almacenan en un buffer temporal hasta que el receptor confirme la correcta recepción de un grupo de tramas o en puntos específicos definidos por el protocolo de comunicación. Si el receptor detecta que una trama dentro del grupo presenta errores, puede optar por dos acciones:
     * Reenvío Selectivo: El emisor retransmite únicamente la trama que fue identificada como errónea. Este método es conocido como rechazo selectivo y es eficiente en términos de ancho de banda, ya que solo se retransmite la información que realmente falló.
     * Reenvío No Selectivo: El emisor retransmite la trama con errores y todas las tramas que aún están pendientes de confirmación. Este método, denominado rechazo no selectivo, puede ahorrar tiempo en situaciones donde múltiples tramas podrían estar afectadas por errores, pero consume más ancho de banda debido a la retransmisión adicional.
+
+## Cableado estructurado
+
+### ¿Qué es el cableado estructurado?
+
+El cableado estructurado es un sistema de infraestructura de telecomunicaciones que permite conectar todos los dispositivos de una red de forma organizada, segura y estandarizada. Su objetivo principal es facilitar la comunicación de datos, voz y otros servicios dentro de un edificio o conjunto de edificios, garantizando orden, escalabilidad y facilidad de mantenimiento.
+
+A diferencia de instalaciones improvisadas donde cada equipo se conecta directamente al switch con cables largos y desordenados, el cableado estructurado sigue una arquitectura planificada, en la que cada punto de red termina en una roseta y todas las conexiones se centralizan en un armario de comunicaciones o rack.
+
+Este sistema se basa en normas internacionales (como la ISO/IEC 11801 o la TIA/EIA-568), que definen cómo deben organizarse los cables, los conectores y los dispositivos para asegurar un buen rendimiento y compatibilidad.
+
+![Cableado estructurado](assets/images/ud4/img38.png){ width="400" }
+
+## Elementos y subsistemas del cableado estructurado
+
+El cableado estructurado se organiza en diferentes subsistemas, cada uno con una función concreta dentro de la infraestructura de red. Esta división permite mantener el sistema ordenado, facilitar el mantenimiento y garantizar un buen funcionamiento de toda la red.
+
+### Puestos de trabajo
+
+Son los lugares donde se conectan los dispositivos finales de la red, como ordenadores, impresoras de red o teléfonos IP. Cada puesto de trabajo dispone normalmente de una o varias tomas de red.
+
+### Rosetas de red
+
+Las rosetas son los puntos de conexión situados en paredes, suelo o mesas. En ellas termina el cableado que viene desde el rack.
+
+Cada roseta suele estar numerada para poder identificar fácilmente a qué conexión del panel de parcheo corresponde dentro del armario de comunicaciones.
+
+### Rack o armario de comunicaciones
+
+Es un armario metálico donde se centraliza toda la red. En su interior se colocan:
+
+- Paneles de parcheo
+- Switches
+- Routers (si es necesario)
+- Otros dispositivos de red
+
+El rack permite mantener todo organizado, etiquetado y accesible para tareas de mantenimiento.
+
+### Panel de parcheo (patch panel)
+
+Es un panel donde terminan todos los cables que vienen de las rosetas. Cada puerto del panel corresponde a una roseta concreta del aula o edificio.
+
+Desde el panel de parcheo se utilizan latiguillos cortos para conectar cada puerto al switch.
+
+De esta forma:
+
+Roseta → Cable horizontal → Panel de parcheo → Latiguillo → Switch
+
+### Switch
+
+Es el dispositivo encargado de interconectar todos los equipos de la red y permitir el intercambio de datos entre ellos.
+
+Cada puerto del switch se conecta normalmente a un puerto del panel de parcheo.
+
+### Cableado de área de trabajo
+
+Es la parte del sistema que conecta directamente los dispositivos del usuario final con la red.
+
+Incluye:
+
+- Ordenadores
+- Impresoras de red
+- Teléfonos IP
+- Latiguillos que conectan los equipos a la roseta
+
+Este subsistema abarca desde el dispositivo hasta la roseta de red.
+
+Su función principal es permitir que los equipos se conecten de forma sencilla y segura al sistema de cableado estructurado.
+
+### Cableado horizontal
+
+Es el cableado que conecta cada roseta del área de trabajo con el armario de comunicaciones o rack del mismo piso o zona.
+
+Normalmente se realiza con cable de par trenzado (UTP, FTP o STP) de categoría 5e, 6 o superior.
+
+Características principales:
+
+- Recorre canaletas, paredes o falsos techos
+- Tiene una longitud máxima recomendada de 90 metros
+- Termina en el panel de parcheo del rack
+
+Este cableado es el más abundante en una instalación típica de red.
+
+### Cableado de administración (armario de cableado, rack)
+
+Es el punto central donde se organiza y gestiona todo el cableado horizontal.
+
+Incluye:
+
+- Rack o armario de comunicaciones
+- Paneles de parcheo
+- Switches
+- Otros dispositivos de red
+
+Desde aquí se distribuyen todas las conexiones del edificio o aula.
+
+Su función es centralizar, organizar y facilitar la gestión de la red.
+
+### Cableado vertical (central o backbone)
+
+Es el cableado que conecta entre sí los distintos armarios de comunicaciones de un edificio.
+
+Por ejemplo:
+
+- Conectar el rack de una planta con el rack de otra planta
+- Conectar distintos cuartos técnicos
+
+Suele utilizarse:
+
+- Fibra óptica (principalmente)
+- En algunos casos cable de cobre de alta categoría
+
+Este subsistema permite que toda la red del edificio funcione como un conjunto.
+
+### Centro de cálculo
+
+Es la zona donde se encuentran los servidores principales y sistemas críticos.
+
+Puede incluir:
+
+- Servidores de archivos
+- Servidores de aplicaciones
+- Sistemas de almacenamiento
+- Equipos de seguridad (firewall, etc.)
+
+Desde el centro de cálculo se suelen distribuir los servicios a todo el edificio o campus.
+
+### Cableado de equipamiento (armario de entrada al edificio)
+
+Es el punto donde entra la conexión del proveedor de servicios de telecomunicaciones al edificio.
+
+Incluye:
+
+- Cableado que llega desde el exterior
+- Equipos del operador (router, ONT, módem, etc.)
+- Primer armario o punto de distribución principal
+
+Desde aquí se enlaza con el backbone o con el centro de cálculo.
+
+### Cableado del campus
+
+Es el cableado que conecta diferentes edificios entre sí dentro de un mismo recinto (instituto, universidad, empresa, etc.).
+
+Incluye:
+
+- Acometidas externas
+- Canalizaciones subterráneas o aéreas
+- Enlaces de fibra óptica entre edificios
+
+Permite que varios edificios compartan la misma red.
+
+![Cableado estructurado](assets/images/ud4/img39.png){ width="700" }
+
+1. Cableado de área de trabajo
+2. Cableado horizontal
+3. Cableado de administración (armario de cableado, rack)
+4. Cableado vertical (central, backbone)
+5. Centro de cálculo
+6. Cableado de equipamiento (armario de entrada al edificio)
+7. Cableado del campus (acometida, cableado entre edificios)
+
+## Esquema físico y lógico
+
+### Esquema físico
+
+Representa cómo están conectados realmente los dispositivos mediante cables.
+
+Incluye:
+
+- PCs
+- Rosetas
+- Cables
+- Rack
+- Panel de parcheo
+- Switch
+
+Muestra el recorrido real del cableado y la organización de la infraestructura.
+
+Es el tipo de esquema que se suele usar para instalar, mantener o reparar la red.
+
+### Esquema lógico
+
+Representa cómo se comunican los dispositivos a nivel de red.
+
+Incluye:
+
+- Direcciones IP
+- Máscaras de red
+- Puertas de enlace
+- Conexiones entre dispositivos (sin mostrar cables físicos)
+
+Se centra en la estructura de la red desde el punto de vista de la comunicación.
+
+Suele representarse con programas como Cisco Packet Tracer.
