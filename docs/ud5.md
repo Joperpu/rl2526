@@ -120,6 +120,96 @@ Ejemplo:
 - Broadcast: 192.168.1.127
 - Hosts: 192.168.1.65 – 192.168.1.126
 
+#### VLSM
+
+Una vez comprendido el subnetting clásico, donde todas las subredes tienen el mismo tamaño, aparece una limitación importante: no todas las subredes necesitan el mismo número de hosts.
+
+El VLSM (Variable Length Subnet Mask) es una técnica que permite utilizar máscaras de red de distinta longitud dentro de una misma red, creando subredes de tamaños diferentes según las necesidades reales.
+
+De esta forma se consigue un aprovechamiento mucho más eficiente de las direcciones IP.
+
+**Diferencia entre subnetting y VLSM**
+
+En subnetting clásico:
+
+- Todas las subredes tienen la misma máscara.
+- Todas las subredes tienen el mismo número de hosts.
+- Es sencillo, pero poco flexible.
+
+En VLSM:
+
+- Cada subred puede tener una máscara distinta.
+- Cada subred puede tener un número diferente de hosts.
+- Es más eficiente y se utiliza en redes reales.
+- Las subredes más grandes se asignan primero, y las más pequeñas después.
+
+**Pasos para realizar VLSM**
+
+El proceso de VLSM siempre sigue los mismos pasos:
+
+1.	Partir de una red base.
+2.	Anotar las necesidades de hosts de cada subred.
+3.	Ordenar las subredes de mayor a menor número de hosts.
+4.	Asignar la máscara adecuada a cada subred.
+5.	Calcular dirección de red, broadcast y rango de hosts.
+6.	Continuar con la siguiente subred usando la siguiente dirección libre.
+
+##### Ejemplo de subnetting con VLSM
+
+Red base: `192.168.1.0/24`
+
+Necesidades:
+
+- Subred A: 100 hosts.
+- Subred B: 30 hosts.
+- Subred C: 10 hosts.
+
+*Paso 1: ordenar las redes por número de hosts*
+
+100 hosts -> 30 hosts -> 10 hosts.
+
+*Paso 2: elegir la máscara adecuada*
+
+- Para 100 hosts -> se necesitan 7 bits de hosts: Máscara /25 -> 126 hosts.
+- Para 30 hosts -> se necesitan 5 bits de hosts: Máscara /27 -> 30 hosts.
+- Para 10 hosts -> se necesitan 4 bits de hosts: Máscara /28 -> 14 hosts.
+
+*Paso 3: asignación de subredes*
+
+**Subred A**
+
+```
+Red: 192.168.1.0/25
+Hosts: 192.168.1.1 – 192.168.1.126
+Broadcast: 192.168.1.127
+```
+
+**Subred B**
+
+```
+Red: 192.168.1.128/27
+Hosts: 192.168.1.129 – 192.168.1.158
+Broadcast: 192.168.1.159
+```
+
+**Subred C**
+
+```
+Red: 192.168.1.160/28
+Hosts: 192.168.1.161 – 192.168.1.174
+Broadcast: 192.168.1.175
+```
+
+El resto de direcciones quedan disponibles para futuras ampliaciones.
+
+##### Errores comunes al usar VLSM
+
+- No ordenar las subredes de mayor a menor.
+- Asignar una máscara demasiado pequeña.
+- Solapar rangos de direcciones.
+- Olvidar reservar dirección de red y broadcast.
+- Empezar una subred en una dirección que no coincide con el tamaño de bloque.
+
 
 <!-- 
 ## Configuración y administración de conmutadores
