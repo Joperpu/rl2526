@@ -6,7 +6,7 @@
 
 Considera la siguiente configuración de red.
 
-![Red](assets/images/ud6/img08.jpeg){ width=600 }
+![Red](assets/images/ud6/img08.jpeg){ width=700 }
 
 1. ¿Cuántas conexiones directas esperas encontrar en la tabla de rutas de cada router? ¿Aparecerán rutas dinámicas? Justifica tu respuesta.
 2. Determina la dirección de red de la interfaz interna (LAN) del Router Principal 2. ¿Por qué?
@@ -16,7 +16,7 @@ Considera la siguiente configuración de red.
 
 **Se valorará positivamente todas las explicaciones que estén fundadas en capturas de pantalla y argumentos, aunque estas no sean del todo correctas**
 
-**En caso de detectarse IA para redactar los apartados, el profesor se reservará la posibilidad de invalidad la práctica**
+**En caso de detectarse IA para redactar los apartados, el profesor se reservará la posibilidad de invalidar la práctica**
 
 ## Criterios de calificación
 
