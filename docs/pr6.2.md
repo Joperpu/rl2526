@@ -8,29 +8,17 @@ Considera la siguiente configuración de red.
 
 ![Red](assets/images/ud6/img08.jpeg){ width=600 }
 
-1.1 ¿Cuántas conexiones directas esperas encontrar en la tabla de rutas de cada router? ¿Aparecerán rutas dinámicas? Justifica tu respuesta.
-1.2 Determina la dirección de red de la interfaz interna (LAN) del Router Principal 2. ¿Por qué?
-1.3 Configura las tablas de enrutamiento de los routers tal que las redes secundarias 3 y 4 están desactivadas (no puede enviar ni recibir información a través de ella). Demuestramelo usando el comando `tracert` entre las conexiones del PC0-Laptop1, Laptop1-PC4 y PC3-PC4.
-1.4 Supón que se produce un corto en la red principal. Debido a ello, las redes secundarias 3 y 4 se activan para seguir manteniendo la malla. Modifica las tablas de enrutamiento de los routers para los dispositivos sigan conectados. Apoya tu explicación usando el comando `tracert` para comprobar las conexiones PC0-Laptop1, Laptop1-PC4 y PC3-PC4.
-1.5 (Pregunta de respuesta libre) ¿Encuentras una utilidad práctica a la arquitectura del apartado 1.3 y 1.4? Inventate un supuesto que permita usar esta disposición.
-
-
-
-
-
-
+1. ¿Cuántas conexiones directas esperas encontrar en la tabla de rutas de cada router? ¿Aparecerán rutas dinámicas? Justifica tu respuesta.
+2. Determina la dirección de red de la interfaz interna (LAN) del Router Principal 2. ¿Por qué?
+3. Configura las tablas de enrutamiento de los routers tal que las redes secundarias 3 y 4 están desactivadas (no puede enviar ni recibir información a través de ella). Demuestramelo usando el comando `tracert` entre las conexiones del PC0-Laptop1, Laptop1-PC4 y PC3-PC4.
+4. Supón que se produce un corto en la red principal. Debido a ello, las redes secundarias 3 y 4 se activan para seguir manteniendo la malla. Modifica las tablas de enrutamiento de los routers para los dispositivos sigan conectados. Apoya tu explicación usando el comando `tracert` para comprobar las conexiones PC0-Laptop1, Laptop1-PC4 y PC3-PC4.
+5. (Pregunta de respuesta libre) ¿Encuentras una utilidad práctica a la arquitectura del apartado 1.3 y 1.4? Inventate un supuesto que permita usar esta disposición.
 
 **Se valorará positivamente todas las explicaciones que estén fundadas en capturas de pantalla y argumentos, aunque estas no sean del todo correctas**
 
 **En caso de detectarse IA para redactar los apartados, el profesor se reservará la posibilidad de invalidad la práctica**
 
-
-
-
-
 ## Criterios de calificación
-
-
 
 ## Entrega
 
