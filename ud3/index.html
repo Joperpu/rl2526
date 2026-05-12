@@ -1,0 +1,4667 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://joperpu.github.io/rl2526/ud3/">
+      
+      
+        <link rel="prev" href="../pr2.11/">
+      
+      
+        <link rel="next" href="../pr3.1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/logo.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Teoría UD3 - Redes locales</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-3-prevencion-de-riesgos-laborales-y-de-proteccion-ambiental" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Redes locales" class="md-header__button md-logo" aria-label="Redes locales" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes locales
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Teoría UD3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Redes locales" class="md-nav__button md-logo" aria-label="Redes locales" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Redes locales
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página principal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 1 - Caracterización de las redes de comunicación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 1 - Caracterización de las redes de comunicación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr1.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr1.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1.3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr1.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 1.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 2 - Normalización de las redes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 2 - Normalización de las redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr2.11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 2.11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 3 - Prevención de riesgos laborales y de protección ambiental
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 3 - Prevención de riesgos laborales y de protección ambiental
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normativa-de-prevencion-de-riesgos-laborales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normativa de prevención de riesgos laborales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normativa de prevención de riesgos laborales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marco-legal-basico-de-la-prevencion-de-riesgos-laborales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marco legal básico de la prevención de riesgos laborales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-de-riesgos-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificación de riesgos en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificación de riesgos en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-peligro-riesgo-y-dano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos básicos: peligro, riesgo y daño
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factores-de-riesgo-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factores de riesgo en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Factores de riesgo en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-electricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos eléctricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-mecanicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos mecánicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-ergonomicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos ergonómicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-por-caidas-y-desplazamientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos por caídas y desplazamientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-por-incendio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos por incendio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-ambientales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos ambientales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacion-practica-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificación práctica de riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-mas-frecuentes-de-accidentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Causas más frecuentes de accidentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-riesgos-probabilidad-y-gravedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluación de riesgos: probabilidad y gravedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medidas-preventivas-y-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas preventivas y de seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medidas preventivas y de seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-medidas-preventivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de medidas preventivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planificacion-preventiva-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planificación preventiva en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planificación preventiva en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-preparacion-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de preparación del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-montaje-de-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de montaje de la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-prueba-y-puesta-en-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de prueba y puesta en servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normas-generales-de-seguridad-en-el-taller-o-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas generales de seguridad en el taller o aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#senalizacion-y-comunicacion-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Señalización y comunicación de riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actuacion-en-caso-de-accidente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuación en caso de accidente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equipos-de-proteccion-individual-epi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equipos de Protección Individual (EPI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equipos de Protección Individual (EPI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-los-epis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de los EPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación de los EPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-la-cabeza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de la cabeza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-ocular-y-facial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección ocular y facial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-las-manos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de las manos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-los-pies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de los pies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-respiratoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección respiratoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-auditiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección auditiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ropa-de-trabajo-y-proteccion-corporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ropa de trabajo y protección corporal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-y-uso-adecuado-de-los-epis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selección y uso adecuado de los EPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conservacion-mantenimiento-y-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conservación, mantenimiento y almacenamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de aplicación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguridad-en-el-uso-de-herramientas-y-maquinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad en el uso de herramientas y máquinas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seguridad en el uso de herramientas y máquinas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-herramientas-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de herramientas en redes locales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principales-riesgos-asociados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principales riesgos asociados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normas-generales-de-seguridad-en-el-uso-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas generales de seguridad en el uso de herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-especifica-en-herramientas-manuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad específica en herramientas manuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-especifica-en-herramientas-electricas-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad específica en herramientas eléctricas portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-seguridad-en-maquinas-y-equipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementos de seguridad en máquinas y equipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento-seguro-de-trabajo-con-maquinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimiento seguro de trabajo con máquinas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-mas-comunes-de-accidentes-con-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Causas más comunes de accidentes con herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-preventivo-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantenimiento preventivo de herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-limpieza-y-ergonomia-en-el-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden, limpieza y ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden, limpieza y ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importancia-del-orden-y-la-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia del orden y la limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importancia del orden y la limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-del-orden-y-la-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beneficios del orden y la limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-orden-en-el-aula-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios del orden en el aula-taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principios del orden en el aula-taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normas-basicas-de-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas básicas de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-limpieza-como-elemento-preventivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La limpieza como elemento preventivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La limpieza como elemento preventivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-de-la-falta-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos de la falta de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergonomia-en-el-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-basicos-de-ergonomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios básicos de ergonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-manual-de-cargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipulación manual de cargas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación manual de cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-para-levantar-y-transportar-cargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones para levantar y transportar cargas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion-temperatura-y-ventilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación, temperatura y ventilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iluminación, temperatura y ventilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventilación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-limpieza-y-ergonomia-en-el-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden, limpieza y ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden, limpieza y ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importancia-del-orden-y-la-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia del orden y la limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importancia del orden y la limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-del-orden-y-la-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beneficios del orden y la limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-orden-en-el-aula-taller_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios del orden en el aula-taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principios del orden en el aula-taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normas-basicas-de-orden_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas básicas de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-limpieza-como-elemento-preventivo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La limpieza como elemento preventivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La limpieza como elemento preventivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-de-la-falta-de-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos de la falta de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergonomia-en-el-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-basicos-de-ergonomia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios básicos de ergonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-manual-de-cargas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipulación manual de cargas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación manual de cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-para-levantar-y-transportar-cargas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones para levantar y transportar cargas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion-temperatura-y-ventilacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación, temperatura y ventilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iluminación, temperatura y ventilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperatura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventilacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventilación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proteccion-ambiental-y-gestion-de-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección ambiental y gestión de residuos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protección ambiental y gestión de residuos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-la-proteccion-ambiental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios de la protección ambiental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuentes-de-contaminacion-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de contaminación en redes locales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-proteccion-ambiental-en-el-montaje-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas de protección ambiental en el montaje de redes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medidas de protección ambiental en el montaje de redes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antes-del-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes del montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durante-el-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Durante el montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despues-del-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Después del montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-y-gestion-de-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación y gestión de residuos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-residuos-electricos-y-electronicos-raee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de residuos eléctricos y electrónicos (RAEE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de residuos eléctricos y electrónicos (RAEE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento-de-gestion-de-raee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimiento de gestión de RAEE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr3.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 3.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr3.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 3.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 4 - Organización física de la redes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 4 - Organización física de la redes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr4.6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 4.6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 5 - Instalación y configuración de equipos en una red
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 5 - Instalación y configuración de equipos en una red
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr5.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 5.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Unidad 6 - Interconexión de equipos en redes de área local
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Unidad 6 - Interconexión de equipos en redes de área local
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ud6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Teoría UD6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr6.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 6.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr6.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Práctica 6.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ej/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ejercicios de repaso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#normativa-de-prevencion-de-riesgos-laborales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normativa de prevención de riesgos laborales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normativa de prevención de riesgos laborales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marco-legal-basico-de-la-prevencion-de-riesgos-laborales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marco legal básico de la prevención de riesgos laborales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificacion-de-riesgos-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificación de riesgos en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificación de riesgos en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conceptos-basicos-peligro-riesgo-y-dano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conceptos básicos: peligro, riesgo y daño
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factores-de-riesgo-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Factores de riesgo en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Factores de riesgo en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-electricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos eléctricos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-mecanicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos mecánicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-ergonomicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos ergonómicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-por-caidas-y-desplazamientos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos por caídas y desplazamientos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-por-incendio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos por incendio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-ambientales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos ambientales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identificacion-practica-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificación práctica de riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-mas-frecuentes-de-accidentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Causas más frecuentes de accidentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-riesgos-probabilidad-y-gravedad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluación de riesgos: probabilidad y gravedad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medidas-preventivas-y-de-seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas preventivas y de seguridad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medidas preventivas y de seguridad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-medidas-preventivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de medidas preventivas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planificacion-preventiva-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planificación preventiva en redes locales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planificación preventiva en redes locales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-preparacion-del-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de preparación del trabajo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-montaje-de-la-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de montaje de la red
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-prueba-y-puesta-en-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de prueba y puesta en servicio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fase-de-mantenimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase de mantenimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normas-generales-de-seguridad-en-el-taller-o-aula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas generales de seguridad en el taller o aula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#senalizacion-y-comunicacion-de-riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Señalización y comunicación de riesgos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actuacion-en-caso-de-accidente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actuación en caso de accidente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equipos-de-proteccion-individual-epi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Equipos de Protección Individual (EPI)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Equipos de Protección Individual (EPI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-los-epis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de los EPIs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clasificación de los EPIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-la-cabeza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de la cabeza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-ocular-y-facial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección ocular y facial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-las-manos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de las manos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-de-los-pies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección de los pies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-respiratoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección respiratoria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proteccion-auditiva" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección auditiva
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ropa-de-trabajo-y-proteccion-corporal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ropa de trabajo y protección corporal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seleccion-y-uso-adecuado-de-los-epis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selección y uso adecuado de los EPIs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conservacion-mantenimiento-y-almacenamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conservación, mantenimiento y almacenamiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos de aplicación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seguridad-en-el-uso-de-herramientas-y-maquinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad en el uso de herramientas y máquinas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Seguridad en el uso de herramientas y máquinas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-herramientas-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación de herramientas en redes locales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principales-riesgos-asociados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principales riesgos asociados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#normas-generales-de-seguridad-en-el-uso-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas generales de seguridad en el uso de herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-especifica-en-herramientas-manuales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad específica en herramientas manuales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad-especifica-en-herramientas-electricas-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seguridad específica en herramientas eléctricas portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-de-seguridad-en-maquinas-y-equipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementos de seguridad en máquinas y equipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento-seguro-de-trabajo-con-maquinas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimiento seguro de trabajo con máquinas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-mas-comunes-de-accidentes-con-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Causas más comunes de accidentes con herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mantenimiento-preventivo-de-herramientas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mantenimiento preventivo de herramientas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-limpieza-y-ergonomia-en-el-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden, limpieza y ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden, limpieza y ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importancia-del-orden-y-la-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia del orden y la limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importancia del orden y la limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-del-orden-y-la-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beneficios del orden y la limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-orden-en-el-aula-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios del orden en el aula-taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principios del orden en el aula-taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normas-basicas-de-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas básicas de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-limpieza-como-elemento-preventivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La limpieza como elemento preventivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La limpieza como elemento preventivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-de-la-falta-de-limpieza" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos de la falta de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergonomia-en-el-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-basicos-de-ergonomia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios básicos de ergonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-manual-de-cargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipulación manual de cargas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación manual de cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-para-levantar-y-transportar-cargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones para levantar y transportar cargas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion-temperatura-y-ventilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación, temperatura y ventilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iluminación, temperatura y ventilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventilacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventilación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orden-limpieza-y-ergonomia-en-el-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orden, limpieza y ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Orden, limpieza y ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importancia-del-orden-y-la-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importancia del orden y la limpieza
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Importancia del orden y la limpieza">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beneficios-del-orden-y-la-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beneficios del orden y la limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-orden-en-el-aula-taller_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios del orden en el aula-taller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Principios del orden en el aula-taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normas-basicas-de-orden_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas básicas de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-limpieza-como-elemento-preventivo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La limpieza como elemento preventivo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La limpieza como elemento preventivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buenas-practicas-de-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buenas prácticas de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos-de-la-falta-de-limpieza_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Riesgos de la falta de limpieza
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergonomia-en-el-trabajo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ergonomía en el trabajo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ergonomía en el trabajo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-basicos-de-ergonomia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios básicos de ergonomía
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manipulacion-manual-de-cargas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manipulación manual de cargas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manipulación manual de cargas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recomendaciones-para-levantar-y-transportar-cargas_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recomendaciones para levantar y transportar cargas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion-temperatura-y-ventilacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación, temperatura y ventilación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iluminación, temperatura y ventilación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iluminacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Iluminación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#temperatura_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temperatura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ventilacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ventilación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proteccion-ambiental-y-gestion-de-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protección ambiental y gestión de residuos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protección ambiental y gestión de residuos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-de-la-proteccion-ambiental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Principios de la protección ambiental
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fuentes-de-contaminacion-en-redes-locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fuentes de contaminación en redes locales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medidas-de-proteccion-ambiental-en-el-montaje-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medidas de protección ambiental en el montaje de redes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medidas de protección ambiental en el montaje de redes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antes-del-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes del montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durante-el-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Durante el montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#despues-del-montaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Después del montaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-y-gestion-de-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clasificación y gestión de residuos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-residuos-electricos-y-electronicos-raee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gestión de residuos eléctricos y electrónicos (RAEE)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de residuos eléctricos y electrónicos (RAEE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedimiento-de-gestion-de-raee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedimiento de gestión de RAEE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unidad-3-prevencion-de-riesgos-laborales-y-de-proteccion-ambiental">Unidad 3 - Prevención de riesgos laborales y de protección ambiental</h1>
+<h2 id="normativa-de-prevencion-de-riesgos-laborales">Normativa de prevención de riesgos laborales</h2>
+<p>La prevención de riesgos laborales no es únicamente una cuestión de sentido común o de buenas prácticas en el taller; es, sobre todo, una <strong>obligación legal</strong>. En el ámbito del montaje y mantenimiento de redes locales, toda la actividad que se realiza en el aula-taller, en el centro de trabajo o en una empresa de instalaciones está sometida a la normativa española de seguridad y salud en el trabajo.</p>
+<p>En este apartado se presenta el <strong>marco legal básico</strong> que regula la prevención de riesgos laborales en España, así como las ideas fundamentales que se deben conocer para comprender por qué se planifican las medidas de seguridad de una determinada manera y qué papel desempeñan trabajadores y empresas en esa prevención.</p>
+<h3 id="marco-legal-basico-de-la-prevencion-de-riesgos-laborales">Marco legal básico de la prevención de riesgos laborales</h3>
+<p>El eje central de la normativa española en materia de prevención de riesgos laborales es la <strong>Ley 31/1995, de Prevención de Riesgos Laborales (LPRL)</strong>, modificada posteriormente por la Ley 54/2003. Su objetivo principal es proteger la <strong>seguridad y la salud de los trabajadores</strong> frente a los riesgos derivados del trabajo, promoviendo una auténtica cultura preventiva en las empresas.</p>
+<p>Alrededor de esta ley se desarrollan una serie de reglamentos que concretan sus principios en distintos ámbitos:</p>
+<ul>
+<li><strong>Real Decreto 39/1997</strong>, por el que se aprueba el <strong>Reglamento de los Servicios de Prevención</strong>, que regula cómo debe organizarse la actividad preventiva en la empresa (servicio de prevención propio, ajeno, trabajador designado, etc.).</li>
+<li><strong>Real Decreto 486/1997</strong>, sobre <strong>disposiciones mínimas de seguridad y salud en los lugares de trabajo</strong>, que establece requisitos sobre condiciones constructivas, orden, limpieza, iluminación, temperatura, servicios higiénicos, etc.</li>
+<li><strong>Real Decreto 773/1997</strong>, sobre <strong>equipos de protección individual (EPI)</strong>, que fija las condiciones para la elección, uso y mantenimiento de los EPIs.</li>
+<li>Otros reales decretos regulan aspectos más específicos (por ejemplo, el riesgo eléctrico o la utilización de equipos de trabajo), pero en el contexto de redes locales, los anteriores constituyen el núcleo de lo que se debe conocer.</li>
+</ul>
+<p>Es importante remarcar que esta normativa es <strong>de aplicación general</strong>, es decir, afecta tanto a grandes empresas como a pequeños talleres y empresas de instalación y mantenimiento de redes.</p>
+<h2 id="identificacion-de-riesgos-en-redes-locales">Identificación de riesgos en redes locales</h2>
+<p>Antes de aplicar cualquier medida preventiva, es imprescindible <strong>identificar los riesgos</strong> asociados a cada tarea o fase del trabajo. En el ámbito del montaje y mantenimiento de redes locales, los riesgos se derivan tanto de las <strong>condiciones del entorno</strong> como del uso de <strong>herramientas, materiales y equipos eléctricos</strong>.  </p>
+<p>La identificación de riesgos permite anticipar problemas, reducir accidentes y establecer medidas de prevención y protección adecuadas. Este proceso forma parte de la <strong>evaluación de riesgos laborales</strong>, que debe realizar toda empresa o centro de trabajo conforme al Reglamento de los Servicios de Prevención (RD 39/1997).</p>
+<h3 id="conceptos-basicos-peligro-riesgo-y-dano">Conceptos básicos: peligro, riesgo y daño</h3>
+<p>Para comprender la identificación de riesgos, conviene distinguir tres conceptos fundamentales:</p>
+<ul>
+<li>
+<p><strong>Peligro:</strong> situación, objeto o sustancia que puede causar un daño.<br />
+  Ejemplo: un enchufe sin toma de tierra o una herramienta con el cable deteriorado.  </p>
+</li>
+<li>
+<p><strong>Riesgo:</strong> posibilidad de que ese peligro cause un daño, teniendo en cuenta la probabilidad y la gravedad.<br />
+  Ejemplo: si se usa un taladro sin gafas protectoras, existe riesgo de lesión ocular.  </p>
+</li>
+<li>
+<p><strong>Daño:</strong> consecuencia final de la materialización del riesgo.<br />
+  Ejemplo: una quemadura, corte o caída.</p>
+</li>
+</ul>
+<p>La tarea del profesional consiste en <strong>detectar los peligros</strong>, <strong>evaluar los riesgos</strong> y <strong>adoptar las medidas necesarias</strong> para reducir o eliminar la posibilidad de daño.</p>
+<h3 id="factores-de-riesgo-en-redes-locales">Factores de riesgo en redes locales</h3>
+<p>Durante el montaje y mantenimiento de redes locales se combinan múltiples tareas: perforar paredes, tender cableado, instalar canaletas, montar racks, configurar equipos eléctricos, limpiar zonas de paso o realizar pruebas de conexión. Cada una de estas tareas implica <strong>riesgos específicos</strong> que pueden clasificarse en distintos grupos.</p>
+<h4 id="riesgos-electricos">Riesgos eléctricos</h4>
+<p>Son los más característicos en el ámbito de las telecomunicaciones y redes. Se producen por <strong>contacto directo</strong> con partes activas o <strong>contacto indirecto</strong> con elementos metálicos accidentalmente energizados. Causas frecuentes:</p>
+<ul>
+<li>Manipular cables con tensión.  </li>
+<li>Utilizar herramientas metálicas cerca de enchufes o regletas.  </li>
+<li>Tocar equipos sin conexión a tierra.  </li>
+<li>Sobrecargar líneas o usar regletas defectuosas.  </li>
+</ul>
+<p>Consecuencias posibles:</p>
+<ul>
+<li>Electrocución.  </li>
+<li>Quemaduras.  </li>
+<li>Fibrilación cardíaca.  </li>
+</ul>
+<p>Medidas preventivas:</p>
+<ul>
+<li>Comprobar la desconexión de la corriente antes de intervenir.  </li>
+<li>Usar guantes y calzado dieléctrico.  </li>
+<li>Asegurar la conexión a tierra de los equipos.  </li>
+<li>Mantener los cuadros y enchufes en buen estado.  </li>
+</ul>
+<h4 id="riesgos-mecanicos">Riesgos mecánicos</h4>
+<p>Son los que provienen del uso de herramientas y máquinas. Incluyen cortes, golpes, atrapamientos o proyecciones de partículas.  Ejemplos:</p>
+<ul>
+<li>Cortes al pelar cables o al usar la crimpadora.  </li>
+<li>Golpes al manipular escaleras o racks metálicos.  </li>
+<li>Proyecciones al taladrar o cortar canaletas.  </li>
+</ul>
+<p>Medidas preventivas:</p>
+<ul>
+<li>Mantener las herramientas en buen estado.  </li>
+<li>Utilizar gafas y guantes de protección.  </li>
+<li>Sujetar firmemente las piezas y mantener la concentración durante el trabajo.</li>
+</ul>
+<h4 id="riesgos-ergonomicos">Riesgos ergonómicos</h4>
+<p>Derivan de la <strong>postura</strong>, la <strong>repetición de movimientos</strong> o el <strong>esfuerzo físico</strong>. En redes locales, suelen ser frecuentes por el trabajo agachado, el tendido de cables bajo mesas o el transporte de materiales. Ejemplos:</p>
+<ul>
+<li>Dolor lumbar por levantar bobinas o equipos sin doblar las rodillas.  </li>
+<li>Fatiga muscular por trabajar prolongadamente en posiciones forzadas.  </li>
+<li>Tensión ocular por iluminación deficiente.  </li>
+</ul>
+<p>Medidas preventivas:</p>
+<ul>
+<li>Planificar las tareas alternando posiciones.  </li>
+<li>Usar mesas o carros para el transporte de materiales.  </li>
+<li>Realizar pausas regulares y estiramientos.  </li>
+<li>Ajustar la iluminación y evitar reflejos.</li>
+</ul>
+<h4 id="riesgos-por-caidas-y-desplazamientos">Riesgos por caídas y desplazamientos</h4>
+<p>Son habituales durante la instalación de canaletas o redes en altura. Ejemplos:</p>
+<ul>
+<li>Caídas desde escaleras o taburetes.  </li>
+<li>Tropiezos con cables, herramientas o restos en el suelo.  </li>
+<li>Deslizamientos por suelos húmedos.  </li>
+</ul>
+<p>Medidas preventivas:</p>
+<ul>
+<li>Comprobar la estabilidad de las escaleras.  </li>
+<li>Mantener el área de trabajo limpia y ordenada.  </li>
+<li>Evitar dejar cables o herramientas en zonas de paso.  </li>
+<li>Señalizar zonas húmedas o con obstáculos.</li>
+</ul>
+<h4 id="riesgos-por-incendio">Riesgos por incendio</h4>
+<p>Aunque menos frecuentes, pueden producirse por cortocircuitos, sobrecalentamiento de equipos o acumulación de polvo en ventiladores. Medidas preventivas:</p>
+<ul>
+<li>Revisar la instalación eléctrica.  </li>
+<li>No sobrecargar enchufes ni alargar cables en exceso.  </li>
+<li>Apagar los equipos al finalizar la jornada.  </li>
+<li>Conocer la ubicación de los extintores y salidas de emergencia.</li>
+</ul>
+<h4 id="riesgos-ambientales">Riesgos ambientales</h4>
+<p>Derivados de la exposición a polvo, ruido o temperaturas extremas. En entornos cerrados, la acumulación de polvo o la falta de ventilación pueden afectar a la salud respiratoria y al funcionamiento de los equipos. Medidas preventivas:</p>
+<ul>
+<li>Mantener una ventilación adecuada.  </li>
+<li>Limpiar con frecuencia las zonas de trabajo.  </li>
+<li>Evitar el uso de productos químicos sin protección adecuada.</li>
+</ul>
+<h3 id="identificacion-practica-de-riesgos">Identificación práctica de riesgos</h3>
+<p>El proceso de identificación de riesgos no se basa en la intuición, sino en una observación sistemática del entorno. Generalmente, se siguen los siguientes pasos:</p>
+<ol>
+<li><strong>Analizar las tareas</strong> que se van a realizar (por ejemplo: taladrar, crimpado, instalación de canaletas, configuración de equipos, limpieza).  </li>
+<li><strong>Identificar los peligros</strong> asociados a cada tarea (electricidad, cortes, caídas, polvo, ruido, etc.).  </li>
+<li><strong>Evaluar la probabilidad y la gravedad</strong> del daño que podría producirse.  </li>
+<li><strong>Registrar la información</strong> en una ficha o evaluación de riesgos.  </li>
+<li><strong>Definir medidas preventivas</strong> adecuadas para eliminar o reducir el riesgo.  </li>
+<li><strong>Revisar periódicamente</strong> la evaluación, especialmente si cambian las condiciones o herramientas utilizadas.</li>
+</ol>
+<h3 id="causas-mas-frecuentes-de-accidentes">Causas más frecuentes de accidentes</h3>
+<p>La experiencia en talleres y empresas de instalación muestra que la mayoría de los accidentes no se deben a fallos técnicos, sino a <strong>comportamientos inseguros</strong> o <strong>falta de atención</strong>. Algunas causas habituales son:</p>
+<ul>
+<li>No desconectar la corriente antes de intervenir.  </li>
+<li>No usar los EPIs adecuados.  </li>
+<li>Trabajar con herramientas en mal estado.  </li>
+<li>Dejar el área desordenada y con cables por el suelo.  </li>
+<li>Subir a sillas o mesas en lugar de usar escaleras.  </li>
+<li>Manipular equipos sin haber recibido formación suficiente.  </li>
+</ul>
+<h3 id="evaluacion-de-riesgos-probabilidad-y-gravedad">Evaluación de riesgos: probabilidad y gravedad</h3>
+<p>La evaluación de riesgos consiste en <strong>valorar la probabilidad</strong> de que ocurra un accidente y <strong>la gravedad</strong> del daño que podría causar.  </p>
+<ul>
+<li><strong>Probabilidad alta:</strong> la situación peligrosa ocurre con frecuencia o el trabajador está muy expuesto.  </li>
+<li><strong>Probabilidad media:</strong> el peligro está presente de forma ocasional.  </li>
+<li>
+<p><strong>Probabilidad baja:</strong> el peligro rara vez aparece.  </p>
+</li>
+<li>
+<p><strong>Gravedad leve:</strong> el daño no implica incapacidad (pequeño corte, golpe).  </p>
+</li>
+<li><strong>Gravedad media:</strong> lesión con incapacidad temporal (esguince, quemadura).  </li>
+<li><strong>Gravedad grave:</strong> lesión permanente o muerte (electrocución, caída desde altura).  </li>
+</ul>
+<p>Combinando ambos factores se obtiene el <strong>nivel de riesgo</strong>, que puede representarse en una matriz de evaluación (bajo, medio, alto). Este análisis orienta las decisiones sobre qué medidas deben aplicarse con prioridad.</p>
+<h2 id="medidas-preventivas-y-de-seguridad">Medidas preventivas y de seguridad</h2>
+<p>Una vez identificados los riesgos en el montaje y mantenimiento de redes locales, el siguiente paso consiste en <strong>adoptar las medidas preventivas</strong> necesarias para eliminar o reducir la probabilidad de accidentes. Estas medidas forman parte de la <strong>planificación preventiva</strong>, que debe integrarse desde la fase de diseño de la instalación hasta el mantenimiento y revisión de los equipos.</p>
+<p>La prevención se fundamenta en dos principios básicos:</p>
+<ol>
+<li><strong>Actuar antes de que ocurra el accidente</strong>, anticipando las situaciones de riesgo.  </li>
+<li><strong>Combinar la protección colectiva y la individual</strong>, priorizando siempre la eliminación del riesgo en el origen.</li>
+</ol>
+<h3 id="tipos-de-medidas-preventivas">Tipos de medidas preventivas</h3>
+<p>Las medidas preventivas se clasifican en función del momento en que se aplican y del tipo de protección que ofrecen:</p>
+<ul>
+<li>
+<p><strong>Medidas técnicas:</strong> modifican el entorno físico o los equipos para reducir el riesgo.<br />
+  Ejemplo: uso de canaletas cerradas, diferenciales eléctricos, protectores en máquinas, ventilación adecuada.</p>
+</li>
+<li>
+<p><strong>Medidas organizativas:</strong> establecen procedimientos, normas o métodos de trabajo seguro.<br />
+  Ejemplo: asignar responsables de seguridad, establecer turnos, planificar rutas de cableado, supervisar el uso de escaleras.</p>
+</li>
+<li>
+<p><strong>Medidas formativas o informativas:</strong> orientadas a capacitar a los trabajadores o alumnos.<br />
+  Ejemplo: sesiones de formación sobre riesgos eléctricos, carteles de señalización, fichas de seguridad.</p>
+</li>
+<li>
+<p><strong>Medidas de protección colectiva:</strong> protegen simultáneamente a varias personas.<br />
+  Ejemplo: sistemas de ventilación, protecciones en máquinas, barandillas, dispositivos de corte de corriente.</p>
+</li>
+<li>
+<p><strong>Medidas de protección individual:</strong> protegen únicamente al trabajador que las utiliza.<br />
+  Ejemplo: guantes aislantes, calzado de seguridad, gafas de protección.</p>
+</li>
+</ul>
+<p>El principio general de la prevención establece que se deben <strong>priorizar las medidas colectivas</strong> sobre las individuales, ya que su eficacia no depende del comportamiento de cada persona.</p>
+<h3 id="planificacion-preventiva-en-redes-locales">Planificación preventiva en redes locales</h3>
+<p>Toda instalación de red debe planificarse teniendo en cuenta la <strong>seguridad en cada fase del trabajo</strong>. No se trata solo de “cumplir normas”, sino de integrar la prevención en la ejecución técnica. A continuación se detallan las medidas más relevantes por etapas:</p>
+<h4 id="fase-de-preparacion-del-trabajo">Fase de preparación del trabajo</h4>
+<ul>
+<li>Revisar la <strong>evaluación de riesgos</strong> del aula o del lugar de instalación.  </li>
+<li>Verificar que las <strong>herramientas y equipos</strong> están en buen estado y correctamente calibrados.  </li>
+<li>Comprobar la existencia de <strong>extintores, botiquín y salidas de emergencia</strong>.  </li>
+<li>Planificar la <strong>ruta de cableado</strong>, evitando zonas de paso y puntos peligrosos.  </li>
+<li>Distribuir los <strong>roles</strong> entre los miembros del equipo y explicar las tareas.  </li>
+<li>Comprobar que todos los trabajadores disponen de <strong>EPI adecuados</strong>.</li>
+</ul>
+<h4 id="fase-de-montaje-de-la-red">Fase de montaje de la red</h4>
+<ul>
+<li>Desconectar la corriente antes de realizar perforaciones o manipulaciones.  </li>
+<li>Señalizar las zonas de trabajo y restringir el acceso a personas ajenas.  </li>
+<li>Mantener la zona limpia y libre de obstáculos.  </li>
+<li>Utilizar escaleras seguras y no improvisar apoyos inestables.  </li>
+<li>Sujetar bien los cables y canaletas, evitando tensiones o dobleces excesivos.  </li>
+<li>Evitar sobrecargas en los circuitos eléctricos o regletas.</li>
+</ul>
+<h4 id="fase-de-prueba-y-puesta-en-servicio">Fase de prueba y puesta en servicio</h4>
+<ul>
+<li>Verificar que todos los equipos están correctamente conectados a tierra.  </li>
+<li>Revisar que los cables de red no obstaculizan zonas de paso.  </li>
+<li>Comprobar el funcionamiento de los sistemas eléctricos y de red con instrumentos de medida adecuados.  </li>
+<li>No manipular conectores con los equipos encendidos.  </li>
+<li>Documentar las pruebas y dejar constancia de cualquier incidencia.</li>
+</ul>
+<h4 id="fase-de-mantenimiento">Fase de mantenimiento</h4>
+<ul>
+<li>Desconectar la alimentación de los equipos antes de intervenir.  </li>
+<li>Mantener la limpieza de los ventiladores y ranuras de refrigeración.  </li>
+<li>Sustituir los cables o conectores deteriorados.  </li>
+<li>Evitar la acumulación de polvo en los racks y paneles.  </li>
+<li>Guardar las herramientas después de cada intervención.  </li>
+</ul>
+<h3 id="normas-generales-de-seguridad-en-el-taller-o-aula">Normas generales de seguridad en el taller o aula</h3>
+<p>El aula-taller de redes locales debe considerarse un <strong>entorno laboral real</strong> en el que se aplican las mismas normas de seguridad que en una empresa. Las principales son:</p>
+<ol>
+<li>Mantener siempre <strong>el orden y la limpieza</strong>.  </li>
+<li>Usar la indumentaria adecuada (ropa de trabajo, calzado cerrado, pelo recogido).  </li>
+<li>No manipular equipos eléctricos mojados o con las manos húmedas.  </li>
+<li>No correr ni realizar juegos o bromas durante las prácticas.  </li>
+<li>No utilizar herramientas defectuosas o improvisadas.  </li>
+<li>Guardar los cables enrollados y organizados tras su uso.  </li>
+<li>No conectar equipos sin autorización del profesor o responsable.  </li>
+<li>En caso de accidente, <strong>avisar inmediatamente</strong> al profesor o al responsable de seguridad.  </li>
+<li>Respetar la señalización del aula (pictogramas, prohibiciones, salidas, extintores).  </li>
+<li>Comprobar que todos los equipos quedan desconectados al finalizar la sesión.</li>
+</ol>
+<h3 id="senalizacion-y-comunicacion-de-riesgos">Señalización y comunicación de riesgos</h3>
+<p>La señalización de seguridad es un elemento fundamental dentro de la prevención. Su función es <strong>alertar, orientar o prohibir</strong> determinadas conductas mediante símbolos fácilmente reconocibles.</p>
+<p>Tipos principales de señales:</p>
+<ul>
+<li><strong>Prohibición</strong> (círculo rojo): “No fumar”, “No usar llamas abiertas”.  </li>
+<li><strong>Obligación</strong> (círculo azul): “Uso obligatorio de gafas”, “Uso de calzado de seguridad”.  </li>
+<li><strong>Advertencia</strong> (triángulo amarillo): “Riesgo eléctrico”, “Superficie resbaladiza”.  </li>
+<li><strong>Emergencia o salvamento</strong> (cuadro verde): “Salida de emergencia”, “Botiquín”.  </li>
+<li><strong>Lucha contra incendios</strong> (cuadro rojo): “Extintor”, “Manguera contra incendios”.</li>
+</ul>
+<p>En un aula de redes o en una empresa de instalaciones, la señalización debe colocarse en <strong>lugares visibles</strong>, próxima al riesgo y en cantidad suficiente para que todos los trabajadores puedan reconocerla de un vistazo.  </p>
+<p>Además, cualquier situación de peligro o accidente debe <strong>comunicarse inmediatamente</strong> al responsable de seguridad, siguiendo el procedimiento interno: descripción del hecho, lugar, hora, personas implicadas y medidas adoptadas.</p>
+<h3 id="actuacion-en-caso-de-accidente">Actuación en caso de accidente</h3>
+<p>Aunque la prevención busca evitar que se produzcan accidentes, también es esencial conocer cómo actuar cuando ocurren. Una respuesta rápida y organizada puede <strong>minimizar las consecuencias</strong>.</p>
+<p><strong>En caso de accidente leve (corte, quemadura superficial, golpe):</strong></p>
+<ul>
+<li>Detener la actividad inmediatamente.  </li>
+<li>Avisar al profesor o responsable.  </li>
+<li>Acudir al botiquín y aplicar primeros auxilios básicos.  </li>
+<li>Registrar el incidente para su análisis posterior.</li>
+</ul>
+<p><strong>En caso de accidente grave (electrocución, caída desde altura, incendio):</strong></p>
+<ul>
+<li>No mover al accidentado salvo peligro inminente.  </li>
+<li>Cortar la corriente eléctrica antes de tocar a la víctima.  </li>
+<li>Llamar al 112 e informar del tipo de accidente, lugar exacto y estado del afectado.  </li>
+<li>Esperar a los servicios de emergencia y mantener la calma.  </li>
+<li>Comunicar el suceso a la dirección del centro o empresa.</li>
+</ul>
+<h2 id="equipos-de-proteccion-individual-epi">Equipos de Protección Individual (EPI)</h2>
+<p>Los <strong>Equipos de Protección Individual (EPI)</strong> son el último recurso de la cadena preventiva. Su función es <strong>proteger al trabajador frente a los riesgos</strong> que no pueden eliminarse por medios técnicos u organizativos. En el ámbito del montaje y mantenimiento de redes locales, los EPIs son esenciales para evitar lesiones causadas por cortes, caídas, descargas eléctricas, proyecciones o exposición al polvo.</p>
+<p>El uso adecuado de los EPIs no sustituye a las medidas colectivas ni a la planificación preventiva, pero constituye una <strong>barrera de seguridad personal</strong> indispensable cuando se trabaja con herramientas, electricidad o equipos informáticos en entornos reales o en el aula-taller.</p>
+<h3 id="clasificacion-de-los-epis">Clasificación de los EPIs</h3>
+<p>Los EPIs pueden clasificarse según la parte del cuerpo que protegen o el tipo de riesgo al que se dirigen. En redes locales, los más relevantes son los siguientes:</p>
+<h4 id="proteccion-de-la-cabeza">Protección de la cabeza</h4>
+<ul>
+<li><strong>Casco de seguridad:</strong> protege frente a golpes o caídas de objetos. Es necesario en trabajos de instalación en altura o en entornos con riesgo de caída de herramientas o bandejas metálicas.  </li>
+<li><strong>Gorra antigolpes:</strong> útil en tareas en espacios reducidos (falsos techos, racks) para evitar golpes leves.</li>
+</ul>
+<h4 id="proteccion-ocular-y-facial">Protección ocular y facial</h4>
+<ul>
+<li><strong>Gafas de seguridad:</strong> imprescindibles al perforar, cortar canaletas o manipular componentes que puedan generar partículas. Deben ser resistentes al impacto y cómodas para el uso prolongado.  </li>
+<li><strong>Pantallas faciales:</strong> se utilizan cuando existe riesgo de proyección intensa de partículas o chispas.</li>
+</ul>
+<h4 id="proteccion-de-las-manos">Protección de las manos</h4>
+<ul>
+<li><strong>Guantes dieléctricos:</strong> protegen frente a descargas eléctricas en tareas de conexión o manipulación de equipos con tensión.  </li>
+<li><strong>Guantes de protección mecánica:</strong> útiles para evitar cortes, rozaduras o pellizcos al manipular cableado, canaletas y herramientas.  </li>
+<li><strong>Guantes de precisión:</strong> permiten trabajar con conectores o componentes pequeños sin perder sensibilidad.</li>
+</ul>
+<h4 id="proteccion-de-los-pies">Protección de los pies</h4>
+<ul>
+<li><strong>Calzado de seguridad:</strong> con puntera reforzada y suela antideslizante o aislante. Previene lesiones por caída de objetos, resbalones o descargas eléctricas indirectas.  </li>
+<li><strong>Calzado dieléctrico:</strong> recomendable en trabajos eléctricos o sobre superficies conductoras.</li>
+</ul>
+<h4 id="proteccion-respiratoria">Protección respiratoria</h4>
+<ul>
+<li><strong>Mascarillas antipolvo o con filtro</strong>: necesarias cuando se perforan paredes, techos o suelos que generan polvo o residuos. También útiles en entornos con mala ventilación o acumulación de partículas.</li>
+</ul>
+<h4 id="proteccion-auditiva">Protección auditiva</h4>
+<ul>
+<li><strong>Tapones o auriculares antirruido:</strong> se emplean en entornos donde se utilizan herramientas eléctricas ruidosas (taladros, martillos, etc.) o se trabaja de forma prolongada en zonas industriales.</li>
+</ul>
+<h4 id="ropa-de-trabajo-y-proteccion-corporal">Ropa de trabajo y protección corporal</h4>
+<ul>
+<li><strong>Ropa ajustada y resistente:</strong> evita enganches o desgarros. No debe tener partes sueltas como cordones o bolsillos abiertos.  </li>
+<li><strong>Chaleco reflectante:</strong> obligatorio en zonas de obra o en exteriores con tránsito de vehículos.  </li>
+<li><strong>Bata o mono de trabajo:</strong> protege frente a la suciedad, polvo o salpicaduras ligeras.  </li>
+<li><strong>Arnés de seguridad:</strong> indispensable en trabajos en altura o en cubiertas, donde existe riesgo de caída.</li>
+</ul>
+<h3 id="seleccion-y-uso-adecuado-de-los-epis">Selección y uso adecuado de los EPIs</h3>
+<p>El EPI adecuado se elige tras realizar una <strong>evaluación de riesgos</strong>, considerando la tarea concreta y las condiciones del entorno. Los pasos básicos son:</p>
+<ol>
+<li><strong>Identificar el riesgo</strong> (eléctrico, mecánico, térmico, químico, biológico, etc.).  </li>
+<li><strong>Seleccionar el EPI</strong> que ofrezca una protección eficaz frente a ese riesgo.  </li>
+<li><strong>Verificar la compatibilidad</strong> entre los distintos EPIs (por ejemplo, gafas y casco deben poder usarse conjuntamente).  </li>
+<li><strong>Comprobar el marcado CE</strong> y las instrucciones del fabricante.  </li>
+<li><strong>Formar al usuario</strong> sobre su colocación, ajuste y mantenimiento.  </li>
+</ol>
+<p>El EPI solo es eficaz si se utiliza correctamente. Un casco sin ajustar, unos guantes rotos o unas gafas colgadas del cuello no proporcionan ninguna protección real.</p>
+<h3 id="conservacion-mantenimiento-y-almacenamiento">Conservación, mantenimiento y almacenamiento</h3>
+<p>El mantenimiento de los EPIs es responsabilidad tanto del centro o empresa como del propio usuario. Un EPI en mal estado <strong>pierde completamente su capacidad protectora</strong>.  </p>
+<p>Buenas prácticas de conservación:</p>
+<ul>
+<li>Limpiar los EPIs después de cada uso, siguiendo las instrucciones del fabricante.  </li>
+<li>Guardarlos en un lugar seco, ventilado y alejado de fuentes de calor o luz solar directa.  </li>
+<li>Revisar periódicamente su estado (fisuras, desgaste, oxidación, roturas).  </li>
+<li>Sustituirlos inmediatamente cuando presenten defectos o hayan sufrido un impacto.  </li>
+<li>No compartir EPIs de uso personal como guantes o protectores auditivos.  </li>
+<li>Mantener actualizada la ficha de control o registro de uso.</li>
+</ul>
+<h3 id="ejemplos-de-aplicacion">Ejemplos de aplicación</h3>
+<p>El siguiente cuadro muestra ejemplos concretos de tareas habituales en el módulo de redes locales y los EPIs recomendados:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tarea</strong></th>
+<th><strong>Riesgo principal</strong></th>
+<th><strong>EPIs necesarios</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pelado y crimpado de cables</td>
+<td>Cortes y pellizcos</td>
+<td>Guantes de protección mecánica</td>
+</tr>
+<tr>
+<td>Taladrado de pared o canaleta</td>
+<td>Proyección de partículas, ruido</td>
+<td>Gafas protectoras, tapones antirruido</td>
+</tr>
+<tr>
+<td>Instalación en altura</td>
+<td>Caídas o golpes</td>
+<td>Casco, arnés, calzado antideslizante</td>
+</tr>
+<tr>
+<td>Montaje de rack o armario</td>
+<td>Golpes y aplastamientos</td>
+<td>Calzado de seguridad, guantes</td>
+</tr>
+<tr>
+<td>Manipulación eléctrica</td>
+<td>Contacto eléctrico</td>
+<td>Guantes dieléctricos, calzado aislante</td>
+</tr>
+<tr>
+<td>Limpieza o mantenimiento</td>
+<td>Polvo, posturas forzadas</td>
+<td>Mascarilla, ropa ajustada</td>
+</tr>
+</tbody>
+</table>
+<p>Este tipo de tabla puede utilizarse como <strong>guía de referencia rápida</strong> en el taller, ayudando al alumnado a asociar cada tarea con su equipo de protección correspondiente.</p>
+<h2 id="seguridad-en-el-uso-de-herramientas-y-maquinas">Seguridad en el uso de herramientas y máquinas</h2>
+<p>El montaje y mantenimiento de redes locales requiere el uso continuo de <strong>herramientas manuales y eléctricas</strong>, así como de determinados <strong>equipos de trabajo</strong> (taladros, regletas de impacto, pelacables, crimpadoras, etc.). Un manejo inadecuado de estos instrumentos puede provocar lesiones graves, daños en el material o incluso incendios.  </p>
+<p>Por ello, es fundamental conocer las <strong>normas de seguridad</strong>, los <strong>elementos de protección</strong> y los <strong>procedimientos de uso y mantenimiento</strong> de cada herramienta, garantizando así un entorno de trabajo seguro y eficiente.</p>
+<h3 id="clasificacion-de-herramientas-en-redes-locales">Clasificación de herramientas en redes locales</h3>
+<p>En este ámbito se utilizan principalmente tres tipos de herramientas:</p>
+<ol>
+<li><strong>Herramientas manuales:</strong> no requieren energía externa para su funcionamiento. Ejemplo: destornilladores, alicates, pelacables, crimpadoras, tijeras de electricista, llaves de carraca, martillo.  </li>
+<li><strong>Herramientas eléctricas portátiles:</strong> funcionan mediante conexión eléctrica o batería. Ejemplo: taladro, atornillador eléctrico, pistola de silicona, sierra de calar, aspirador industrial.  </li>
+<li><strong>Máquinas fijas o de taller:</strong> de uso menos habitual en redes, pero presentes en aulas o empresas. Ejemplo: banco de trabajo con herramientas eléctricas, compresores o cortadoras.</li>
+</ol>
+<p>Cada tipo de herramienta exige medidas de seguridad específicas y un mantenimiento adecuado.</p>
+<h3 id="principales-riesgos-asociados">Principales riesgos asociados</h3>
+<p>El uso de herramientas genera una serie de <strong>riesgos mecánicos, eléctricos y ergonómicos</strong> que deben conocerse y prevenirse:</p>
+<ul>
+<li><strong>Cortes y pinchazos:</strong> causados por filos, cuchillas o bordes metálicos.  </li>
+<li><strong>Golpes y aplastamientos:</strong> al manipular objetos pesados o usar martillos.  </li>
+<li><strong>Proyección de partículas:</strong> al taladrar paredes o cortar canaletas.  </li>
+<li><strong>Descargas eléctricas:</strong> por aislamiento defectuoso o manipulación inadecuada.  </li>
+<li><strong>Ruido y vibraciones:</strong> generadas por taladros u otras herramientas eléctricas.  </li>
+<li><strong>Lesiones musculares:</strong> por esfuerzo excesivo, posturas forzadas o repeticiones continuas.  </li>
+</ul>
+<p>Una parte esencial de la prevención consiste en <strong>detectar los riesgos antes de comenzar la tarea</strong> y aplicar los procedimientos de trabajo seguro.</p>
+<h3 id="normas-generales-de-seguridad-en-el-uso-de-herramientas">Normas generales de seguridad en el uso de herramientas</h3>
+<p>Antes de utilizar cualquier herramienta, manual o eléctrica, deben observarse una serie de normas básicas que garantizan la seguridad:</p>
+<ol>
+<li><strong>Comprobación previa:</strong> verificar que la herramienta está en buen estado, limpia y con sus protecciones intactas.  </li>
+<li><strong>Elección adecuada:</strong> utilizar la herramienta correcta para cada tarea, evitando improvisaciones.  </li>
+<li><strong>Inspección eléctrica:</strong> revisar los cables, enchufes y conexiones antes de conectar cualquier equipo.  </li>
+<li><strong>Postura de trabajo estable:</strong> mantener equilibrio y apoyo firme para evitar caídas o resbalones.  </li>
+<li><strong>Zona de trabajo limpia y ordenada:</strong> sin cables ni objetos que obstaculicen el movimiento.  </li>
+<li><strong>Uso obligatorio de EPIs:</strong> guantes, gafas y calzado de seguridad según el tipo de trabajo.  </li>
+<li><strong>No forzar las herramientas:</strong> si no cortan o no encajan, deben repararse o sustituirse.  </li>
+<li><strong>Desconectar la corriente</strong> antes de realizar cualquier mantenimiento o cambio de accesorio.  </li>
+<li><strong>No dejar herramientas en altura:</strong> podrían caer y causar lesiones.  </li>
+<li><strong>Guardar las herramientas</strong> tras su uso en su lugar correspondiente, preferiblemente en cajas o paneles organizadores.</li>
+</ol>
+<h3 id="seguridad-especifica-en-herramientas-manuales">Seguridad específica en herramientas manuales</h3>
+<p>Las herramientas manuales son de uso cotidiano y, precisamente por ello, suelen generar accidentes por exceso de confianza. Las recomendaciones principales son:</p>
+<ul>
+<li>Utilizar <strong>destornilladores</strong> con mango aislante y no emplearlos como palancas o punzones.  </li>
+<li>No cortar cables con <strong>alicates</strong> si no se está seguro de que están sin tensión.  </li>
+<li>Revisar los <strong>pelacables y crimpadoras</strong>, evitando filos deteriorados que puedan resbalar.  </li>
+<li>Mantener las <strong>tijeras de electricista</strong> afiladas y limpias para no ejercer fuerza excesiva.  </li>
+<li>Guardar las herramientas punzantes con las puntas hacia abajo o protegidas.  </li>
+<li>No transportar varias herramientas en el bolsillo: usar cinturón o caja portaútiles.  </li>
+<li>Comprobar periódicamente que los mangos no están sueltos o agrietados.</li>
+</ul>
+<p>El mantenimiento preventivo (limpieza, almacenamiento en lugar seco, etc.) prolonga la vida útil de las herramientas y evita fallos imprevistos durante su uso.</p>
+<h3 id="seguridad-especifica-en-herramientas-electricas-portatiles">Seguridad específica en herramientas eléctricas portátiles</h3>
+<p>El riesgo principal en este tipo de herramientas es el <strong>contacto eléctrico</strong>, por lo que deben aplicarse precauciones adicionales:</p>
+<ul>
+<li>Verificar que la <strong>tensión de alimentación</strong> coincide con la indicada por el fabricante.  </li>
+<li>Usar <strong>enchufes con toma de tierra</strong> y <strong>diferenciales de protección</strong>.  </li>
+<li>No tirar del cable para desenchufar el equipo ni enrollarlo con tensión.  </li>
+<li>Mantener los <strong>cables alejados de zonas de paso</strong> y de fuentes de calor.  </li>
+<li>No utilizar herramientas eléctricas en zonas húmedas o mojadas.  </li>
+<li>No realizar modificaciones, empalmes o reparaciones improvisadas.  </li>
+<li>Esperar a que la herramienta se detenga completamente antes de dejarla en reposo.  </li>
+<li>Desconectarlas siempre antes de cambiar brocas, sierras o puntas.  </li>
+<li>No bloquear los interruptores en posición de encendido.  </li>
+<li>Utilizar <strong>gafas, guantes y protectores auditivos</strong> cuando exista riesgo de proyección o ruido.</li>
+</ul>
+<p>El almacenamiento adecuado de las herramientas eléctricas (en estuches aislantes, limpias y sin cables tensos) es tan importante como su correcto uso.</p>
+<h3 id="elementos-de-seguridad-en-maquinas-y-equipos">Elementos de seguridad en máquinas y equipos</h3>
+<p>Muchas máquinas incorporan <strong>sistemas de protección y seguridad integrados</strong>, diseñados para evitar accidentes. Es fundamental conocerlos y no manipularlos nunca.  </p>
+<p>Entre los más comunes se encuentran:</p>
+<ul>
+<li><strong>Protectores fijos o móviles</strong>: cubren partes móviles o cortantes.  </li>
+<li><strong>Pulsadores de parada de emergencia</strong>: permiten detener la máquina de forma inmediata.  </li>
+<li><strong>Dispositivos de enclavamiento</strong>: impiden el funcionamiento si las protecciones no están colocadas.  </li>
+<li><strong>Limitadores de corriente y fusibles</strong>: protegen frente a sobrecargas eléctricas.  </li>
+<li><strong>Sistemas de ventilación forzada</strong>: evitan el sobrecalentamiento de motores.  </li>
+<li><strong>Señalización luminosa o acústica</strong>: advierte del encendido, fallo o peligro.</li>
+</ul>
+<p>El usuario debe <strong>reconocer, respetar y probar periódicamente</strong> estos dispositivos, asegurando que funcionan correctamente antes de comenzar una práctica o tarea.</p>
+<h3 id="procedimiento-seguro-de-trabajo-con-maquinas">Procedimiento seguro de trabajo con máquinas</h3>
+<p>El trabajo con cualquier máquina, ya sea un taladro o un compresor, debe seguir un <strong>procedimiento seguro</strong> basado en tres etapas: antes, durante y después del uso.</p>
+<p><strong>Antes del uso</strong></p>
+<ul>
+<li>Comprobar el estado del cable, enchufe y carcasa.  </li>
+<li>Asegurarse de que las protecciones están instaladas.  </li>
+<li>Verificar la estabilidad de la superficie de apoyo.  </li>
+<li>Conectarse a una toma con diferencial de protección.  </li>
+</ul>
+<p><strong>Durante el uso</strong></p>
+<ul>
+<li>Sujetar la máquina con ambas manos y mantener la postura equilibrada.  </li>
+<li>No sobrecargar el motor ni presionar excesivamente.  </li>
+<li>Evitar distracciones o hablar con otras personas.  </li>
+<li>No realizar ajustes ni limpiezas mientras la máquina esté en marcha.  </li>
+</ul>
+<p><strong>Después del uso</strong></p>
+<ul>
+<li>Apagar y desenchufar la máquina.  </li>
+<li>Esperar a que se enfríe o se detenga completamente.  </li>
+<li>Limpiar las virutas, polvo o restos generados.  </li>
+<li>Guardar la máquina en su maletín o lugar designado.  </li>
+</ul>
+<h3 id="causas-mas-comunes-de-accidentes-con-herramientas">Causas más comunes de accidentes con herramientas</h3>
+<p>Los registros de siniestralidad en talleres y obras muestran que los accidentes más frecuentes se deben a:</p>
+<ul>
+<li>Exceso de confianza o descuido.  </li>
+<li>Falta de formación o experiencia.  </li>
+<li>Herramientas en mal estado.  </li>
+<li>No utilización de los EPIs correspondientes.  </li>
+<li>Posturas incorrectas o prisas en la ejecución.  </li>
+<li>No desconectar la corriente antes de intervenir.  </li>
+</ul>
+<p>Conocer estas causas permite <strong>prevenir errores repetitivos</strong> y desarrollar una actitud profesional basada en la prudencia y la atención constante.</p>
+<h3 id="mantenimiento-preventivo-de-herramientas">Mantenimiento preventivo de herramientas</h3>
+<p>El mantenimiento de las herramientas es parte de la seguridad. Una herramienta defectuosa es tan peligrosa como una mal utilizada.  </p>
+<p>Buenas prácticas de mantenimiento:</p>
+<ul>
+<li>Limpiar las herramientas tras su uso para evitar oxidación.  </li>
+<li>Revisar mangos, filos y mecanismos de cierre.  </li>
+<li>Sustituir las piezas desgastadas o deterioradas.  </li>
+<li>Guardar las herramientas en armarios o paneles identificados.  </li>
+<li>Realizar revisiones eléctricas periódicas (aislamiento, enchufes, fusibles).  </li>
+<li>Mantener un registro o inventario actualizado del material.</li>
+</ul>
+<h2 id="orden-limpieza-y-ergonomia-en-el-trabajo">Orden, limpieza y ergonomía en el trabajo</h2>
+<p>El <strong>orden, la limpieza y la ergonomía</strong> son tres pilares fundamentales de la seguridad laboral. A menudo se subestiman por considerarse aspectos secundarios, pero en realidad constituyen el <strong>primer nivel de prevención</strong>. Un espacio de trabajo limpio, ordenado y adaptado a las características físicas del trabajador reduce drásticamente los accidentes y mejora la eficiencia en las tareas.</p>
+<p>En el montaje y mantenimiento de redes locales —donde se manipulan cables, herramientas, escaleras y equipos eléctricos— el desorden o la mala postura pueden provocar caídas, tropiezos, lesiones musculares o incluso daños en los dispositivos. Por ello, mantener una correcta organización del puesto y aplicar principios ergonómicos no solo es una cuestión de higiene, sino de <strong>seguridad, salud y calidad profesional</strong>.</p>
+<h3 id="importancia-del-orden-y-la-limpieza">Importancia del orden y la limpieza</h3>
+<p>El <strong>orden</strong> consiste en disponer los elementos del trabajo de manera lógica y funcional, mientras que la <strong>limpieza</strong> implica mantener libres de polvo, restos y residuos las superficies, equipos y herramientas. Ambos factores tienen una influencia directa en la prevención de accidentes.</p>
+<h4 id="beneficios-del-orden-y-la-limpieza">Beneficios del orden y la limpieza</h4>
+<ul>
+<li>Disminuyen el riesgo de <strong>tropiezos, caídas y golpes</strong>.  </li>
+<li>Evitan <strong>daños a materiales y equipos</strong>.  </li>
+<li>Facilitan la <strong>localización rápida</strong> de herramientas y materiales.  </li>
+<li>Aumentan la <strong>eficiencia</strong> y reducen el tiempo de trabajo.  </li>
+<li>Favorecen una <strong>actitud responsable y profesional</strong>.  </li>
+<li>Mejoran el <strong>ambiente de trabajo</strong> y la concentración.  </li>
+</ul>
+<p>En el contexto de redes locales, mantener el orden implica:</p>
+<ul>
+<li>No dejar cables por el suelo o en zonas de paso.  </li>
+<li>Guardar las herramientas en su sitio tras cada uso.  </li>
+<li>Mantener los paneles de parcheo y racks sin polvo ni restos.  </li>
+<li>Desechar correctamente los recortes de cable, bridas o canaletas.  </li>
+<li>Revisar periódicamente el estado de los equipos y su limpieza.</li>
+</ul>
+<h3 id="principios-del-orden-en-el-aula-taller">Principios del orden en el aula-taller</h3>
+<p>El taller de redes debe organizarse aplicando criterios de <strong>orden funcional</strong>. Cada elemento (herramienta, material o equipo) debe tener un lugar asignado y debe ser devuelto al finalizar su uso.</p>
+<h4 id="normas-basicas-de-orden">Normas básicas de orden</h4>
+<ol>
+<li><strong>Clasificar y etiquetar</strong> las herramientas y componentes (cajas, paneles, estanterías).  </li>
+<li><strong>Retirar los materiales no necesarios</strong> antes de iniciar la práctica.  </li>
+<li><strong>Guardar los cables enrollados</strong> y agrupados por tipo o longitud.  </li>
+<li><strong>Evitar amontonamientos</strong> de bobinas, canaletas o cajas.  </li>
+<li><strong>Asignar zonas de trabajo</strong> delimitadas para cada grupo de alumnos.  </li>
+<li><strong>Mantener despejadas las rutas de paso</strong> y salidas de emergencia.  </li>
+<li><strong>Comprobar el estado del suelo</strong> y limpiar si hay polvo, restos o líquidos.  </li>
+</ol>
+<h3 id="la-limpieza-como-elemento-preventivo">La limpieza como elemento preventivo</h3>
+<p>La limpieza no solo tiene una función estética, sino que constituye una medida <strong>higiénico-preventiva</strong> esencial. En el ámbito de las redes locales, donde los equipos electrónicos generan polvo y calor, la falta de limpieza puede afectar tanto a la salud como al rendimiento de los dispositivos.</p>
+<h4 id="buenas-practicas-de-limpieza">Buenas prácticas de limpieza</h4>
+<ul>
+<li>Limpiar las superficies de trabajo antes y después de cada práctica.  </li>
+<li>Retirar restos de cableado, plásticos y virutas tras taladrar o cortar.  </li>
+<li>Utilizar aspiradores o paños húmedos, evitando soplar o barrer en seco.  </li>
+<li>Desconectar siempre los equipos antes de limpiarlos.  </li>
+<li>Revisar y limpiar ventiladores, filtros y rejillas de equipos informáticos.  </li>
+<li>Vaciar y clasificar los residuos en contenedores adecuados.  </li>
+</ul>
+<h4 id="riesgos-de-la-falta-de-limpieza">Riesgos de la falta de limpieza</h4>
+<ul>
+<li>Tropiezos por restos en el suelo.  </li>
+<li>Inhalación de polvo o partículas.  </li>
+<li>Deterioro prematuro de equipos eléctricos.  </li>
+<li>Riesgo de incendio por acumulación de polvo en ventiladores o fuentes de alimentación.  </li>
+</ul>
+<p>El mantenimiento de la limpieza es una <strong>responsabilidad colectiva</strong>: todos los miembros del equipo deben colaborar al finalizar la jornada, dejando el puesto igual o mejor que como lo encontraron.</p>
+<h3 id="ergonomia-en-el-trabajo">Ergonomía en el trabajo</h3>
+<p>La <strong>ergonomía</strong> estudia la relación entre el trabajador y su entorno, con el objetivo de <strong>adaptar el trabajo a la persona</strong>, no al revés. En redes locales, donde se combinan tareas de manipulación física y trabajo informático, la ergonomía tiene un papel clave para evitar lesiones musculares, fatiga visual o trastornos posturales.</p>
+<h4 id="principios-basicos-de-ergonomia">Principios básicos de ergonomía</h4>
+<ol>
+<li><strong>Postura natural y equilibrada:</strong> mantener la espalda recta y los hombros relajados.  </li>
+<li><strong>Distribución de alturas:</strong> trabajar a la altura de los codos o ligeramente por debajo.  </li>
+<li><strong>Movimiento eficiente:</strong> evitar torsiones o estiramientos innecesarios.  </li>
+<li><strong>Uso adecuado de mobiliario:</strong> mesas, sillas y bancos ajustados a la tarea.  </li>
+<li><strong>Descansos activos:</strong> realizar estiramientos y pausas breves cada cierto tiempo.  </li>
+<li><strong>Iluminación correcta:</strong> luz suficiente sin deslumbramientos ni reflejos.  </li>
+</ol>
+<h3 id="manipulacion-manual-de-cargas">Manipulación manual de cargas</h3>
+<p>En la instalación de redes es frecuente levantar cajas de cable, armarios de comunicaciones o bobinas. Una manipulación incorrecta puede provocar <strong>lumbalgias, hernias discales o lesiones musculares</strong>.</p>
+<h4 id="recomendaciones-para-levantar-y-transportar-cargas">Recomendaciones para levantar y transportar cargas</h4>
+<ul>
+<li>Evaluar el peso antes de levantar (no superar los 15-20 kg individualmente).  </li>
+<li>Acercar la carga al cuerpo y separar los pies para lograr estabilidad.  </li>
+<li>Doblar las rodillas, no la espalda.  </li>
+<li>Sujetar firmemente la carga y levantar con las piernas.  </li>
+<li>No girar el tronco mientras se transporta; mover los pies para cambiar de dirección.  </li>
+<li>Usar ayudas mecánicas (carros, plataformas) cuando el peso sea elevado.  </li>
+<li>Pedir colaboración cuando la carga sea voluminosa o pesada.  </li>
+</ul>
+<h3 id="iluminacion-temperatura-y-ventilacion">Iluminación, temperatura y ventilación</h3>
+<p>Las condiciones ambientales del aula o del lugar de trabajo influyen directamente en la seguridad y en el confort. Un entorno inadecuado provoca fatiga, distracción y errores.</p>
+<h4 id="iluminacion">Iluminación</h4>
+<ul>
+<li>Debe ser suficiente y uniforme, sin deslumbramientos ni sombras.  </li>
+<li>Las zonas de trabajo de precisión (racks, paneles, cableado) requieren luz focal adicional.  </li>
+<li>La iluminación deficiente aumenta el riesgo de tropiezos y posturas forzadas.</li>
+</ul>
+<h4 id="temperatura">Temperatura</h4>
+<ul>
+<li>Las condiciones ideales se sitúan entre <strong>18 °C y 25 °C</strong>.  </li>
+<li>Un exceso de calor genera somnolencia; el frío reduce la movilidad y la concentración.  </li>
+<li>Los equipos de red deben mantenerse ventilados para evitar sobrecalentamiento.</li>
+</ul>
+<h4 id="ventilacion">Ventilación</h4>
+<ul>
+<li>Debe garantizar la renovación del aire y la eliminación del polvo.  </li>
+<li>Las salas con equipos informáticos necesitan ventilación forzada o climatización específica.</li>
+</ul>
+<h2 id="orden-limpieza-y-ergonomia-en-el-trabajo_1">Orden, limpieza y ergonomía en el trabajo</h2>
+<p>El <strong>orden, la limpieza y la ergonomía</strong> son tres pilares fundamentales de la seguridad laboral. A menudo se subestiman por considerarse aspectos secundarios, pero en realidad constituyen el <strong>primer nivel de prevención</strong>. Un espacio de trabajo limpio, ordenado y adaptado a las características físicas del trabajador reduce drásticamente los accidentes y mejora la eficiencia en las tareas.</p>
+<p>En el montaje y mantenimiento de redes locales —donde se manipulan cables, herramientas, escaleras y equipos eléctricos— el desorden o la mala postura pueden provocar caídas, tropiezos, lesiones musculares o incluso daños en los dispositivos. Por ello, mantener una correcta organización del puesto y aplicar principios ergonómicos no solo es una cuestión de higiene, sino de <strong>seguridad, salud y calidad profesional</strong>.</p>
+<h3 id="importancia-del-orden-y-la-limpieza_1">Importancia del orden y la limpieza</h3>
+<p>El <strong>orden</strong> consiste en disponer los elementos del trabajo de manera lógica y funcional, mientras que la <strong>limpieza</strong> implica mantener libres de polvo, restos y residuos las superficies, equipos y herramientas. Ambos factores tienen una influencia directa en la prevención de accidentes.</p>
+<h4 id="beneficios-del-orden-y-la-limpieza_1">Beneficios del orden y la limpieza</h4>
+<ul>
+<li>Disminuyen el riesgo de <strong>tropiezos, caídas y golpes</strong>.  </li>
+<li>Evitan <strong>daños a materiales y equipos</strong>.  </li>
+<li>Facilitan la <strong>localización rápida</strong> de herramientas y materiales.  </li>
+<li>Aumentan la <strong>eficiencia</strong> y reducen el tiempo de trabajo.  </li>
+<li>Favorecen una <strong>actitud responsable y profesional</strong>.  </li>
+<li>Mejoran el <strong>ambiente de trabajo</strong> y la concentración.  </li>
+</ul>
+<h3 id="principios-del-orden-en-el-aula-taller_1">Principios del orden en el aula-taller</h3>
+<p>El aula-taller de redes debe organizarse aplicando criterios de <strong>orden funcional</strong>. Cada elemento (herramienta, material o equipo) debe tener un lugar asignado y debe ser devuelto al finalizar su uso.</p>
+<h4 id="normas-basicas-de-orden_1">Normas básicas de orden</h4>
+<ol>
+<li><strong>Clasificar y etiquetar</strong> las herramientas y componentes (cajas, paneles, estanterías).  </li>
+<li><strong>Retirar los materiales no necesarios</strong> antes de iniciar la práctica.  </li>
+<li><strong>Guardar los cables enrollados</strong> y agrupados por tipo o longitud.  </li>
+<li><strong>Evitar amontonamientos</strong> de bobinas, canaletas o cajas.  </li>
+<li><strong>Asignar zonas de trabajo</strong> delimitadas para cada grupo de alumnos.  </li>
+<li><strong>Mantener despejadas las rutas de paso</strong> y salidas de emergencia.  </li>
+<li><strong>Comprobar el estado del suelo</strong> y limpiar si hay polvo, restos o líquidos.  </li>
+</ol>
+<h3 id="la-limpieza-como-elemento-preventivo_1">La limpieza como elemento preventivo</h3>
+<p>La limpieza no solo tiene una función estética, sino que constituye una medida <strong>higiénico-preventiva</strong> esencial. En el ámbito de las redes locales, donde los equipos electrónicos generan polvo y calor, la falta de limpieza puede afectar tanto a la salud como al rendimiento de los dispositivos.</p>
+<h4 id="buenas-practicas-de-limpieza_1">Buenas prácticas de limpieza</h4>
+<ul>
+<li>Limpiar las superficies de trabajo antes y después de cada práctica.  </li>
+<li>Retirar restos de cableado, plásticos y virutas tras taladrar o cortar.  </li>
+<li>Utilizar aspiradores o paños húmedos, evitando soplar o barrer en seco.  </li>
+<li>Desconectar siempre los equipos antes de limpiarlos.  </li>
+<li>Revisar y limpiar ventiladores, filtros y rejillas de equipos informáticos.  </li>
+<li>Vaciar y clasificar los residuos en contenedores adecuados.  </li>
+</ul>
+<h4 id="riesgos-de-la-falta-de-limpieza_1">Riesgos de la falta de limpieza</h4>
+<ul>
+<li>Tropiezos por restos en el suelo.  </li>
+<li>Inhalación de polvo o partículas.  </li>
+<li>Deterioro prematuro de equipos eléctricos.  </li>
+<li>Riesgo de incendio por acumulación de polvo en ventiladores o fuentes de alimentación.  </li>
+</ul>
+<h3 id="ergonomia-en-el-trabajo_1">Ergonomía en el trabajo</h3>
+<p>La <strong>ergonomía</strong> estudia la relación entre el trabajador y su entorno, con el objetivo de <strong>adaptar el trabajo a la persona</strong>, no al revés. En redes locales, donde se combinan tareas de manipulación física y trabajo informático, la ergonomía tiene un papel clave para evitar lesiones musculares, fatiga visual o trastornos posturales.</p>
+<h4 id="principios-basicos-de-ergonomia_1">Principios básicos de ergonomía</h4>
+<ol>
+<li><strong>Postura natural y equilibrada:</strong> mantener la espalda recta y los hombros relajados.  </li>
+<li><strong>Distribución de alturas:</strong> trabajar a la altura de los codos o ligeramente por debajo.  </li>
+<li><strong>Movimiento eficiente:</strong> evitar torsiones o estiramientos innecesarios.  </li>
+<li><strong>Uso adecuado de mobiliario:</strong> mesas, sillas y bancos ajustados a la tarea.  </li>
+<li><strong>Descansos activos:</strong> realizar estiramientos y pausas breves cada cierto tiempo.  </li>
+<li><strong>Iluminación correcta:</strong> luz suficiente sin deslumbramientos ni reflejos.  </li>
+</ol>
+<h3 id="manipulacion-manual-de-cargas_1">Manipulación manual de cargas</h3>
+<p>En la instalación de redes es frecuente levantar cajas de cable, armarios de comunicaciones o bobinas. Una manipulación incorrecta puede provocar <strong>lumbalgias, hernias discales o lesiones musculares</strong>.</p>
+<h4 id="recomendaciones-para-levantar-y-transportar-cargas_1">Recomendaciones para levantar y transportar cargas</h4>
+<ul>
+<li>Evaluar el peso antes de levantar (no superar los 15-20 kg individualmente).  </li>
+<li>Acercar la carga al cuerpo y separar los pies para lograr estabilidad.  </li>
+<li>Doblar las rodillas, no la espalda.  </li>
+<li>Sujetar firmemente la carga y levantar con las piernas.  </li>
+<li>No girar el tronco mientras se transporta; mover los pies para cambiar de dirección.  </li>
+<li>Usar ayudas mecánicas (carros, plataformas) cuando el peso sea elevado.  </li>
+<li>Pedir colaboración cuando la carga sea voluminosa o pesada.  </li>
+</ul>
+<h3 id="iluminacion-temperatura-y-ventilacion_1">Iluminación, temperatura y ventilación</h3>
+<p>Las condiciones ambientales del aula o del lugar de trabajo influyen directamente en la seguridad y en el confort. Un entorno inadecuado provoca fatiga, distracción y errores.</p>
+<h4 id="iluminacion_1">Iluminación</h4>
+<ul>
+<li>Debe ser suficiente y uniforme, sin deslumbramientos ni sombras.  </li>
+<li>Las zonas de trabajo de precisión (racks, paneles, cableado) requieren luz focal adicional.  </li>
+<li>La iluminación deficiente aumenta el riesgo de tropiezos y posturas forzadas.</li>
+</ul>
+<h4 id="temperatura_1">Temperatura</h4>
+<ul>
+<li>Las condiciones ideales se sitúan entre <strong>18 °C y 25 °C</strong>.  </li>
+<li>Un exceso de calor genera somnolencia; el frío reduce la movilidad y la concentración.  </li>
+<li>Los equipos de red deben mantenerse ventilados para evitar sobrecalentamiento.</li>
+</ul>
+<h4 id="ventilacion_1">Ventilación</h4>
+<ul>
+<li>Debe garantizar la renovación del aire y la eliminación del polvo.  </li>
+<li>Las salas con equipos informáticos necesitan ventilación forzada o climatización específica.</li>
+</ul>
+<h2 id="proteccion-ambiental-y-gestion-de-residuos">Protección ambiental y gestión de residuos</h2>
+<p>El montaje y mantenimiento de redes locales no solo implica cumplir las normas de seguridad laboral, sino también las de <strong>protección ambiental</strong>. Cada actuación técnica genera residuos —cables, envoltorios, restos plásticos, equipos electrónicos— que deben gestionarse correctamente para <strong>evitar la contaminación del entorno y el despilfarro de recursos naturales</strong>.</p>
+<p>Trabajar con criterios de sostenibilidad forma parte de la profesionalidad del técnico en redes. Cuidar el medio ambiente no es una acción opcional, sino una <strong>obligación legal y ética</strong>, recogida tanto en la normativa española como en las directivas europeas sobre gestión de residuos y eficiencia energética.</p>
+<h3 id="principios-de-la-proteccion-ambiental">Principios de la protección ambiental</h3>
+<p>La <strong>protección ambiental</strong> busca minimizar el impacto de las actividades humanas sobre el medio natural. En el ámbito de las redes locales, esto se traduce en prácticas concretas relacionadas con el consumo de materiales, la generación de residuos y el uso de energía.</p>
+<p>Los tres principios fundamentales son:</p>
+<ul>
+<li><strong>Reducir:</strong> evitar el consumo innecesario de materiales y energía.  </li>
+<li><strong>Reutilizar:</strong> dar un nuevo uso a materiales o componentes que aún conservan su funcionalidad.  </li>
+<li><strong>Reciclar:</strong> separar los residuos para que puedan ser transformados en nuevos productos.  </li>
+</ul>
+<p>A estos tres principios se añaden dos más:
+- <strong>Recuperar:</strong> aprovechar los recursos contenidos en los residuos (metales, plásticos, componentes).<br />
+- <strong>Reparar:</strong> prolongar la vida útil de los equipos y materiales antes de desecharlos.</p>
+<p>Estos principios conforman la conocida <strong>“regla de las 5R”</strong>, que resume el enfoque sostenible que debe aplicarse también en los talleres y empresas del ámbito de las telecomunicaciones. </p>
+<h3 id="fuentes-de-contaminacion-en-redes-locales">Fuentes de contaminación en redes locales</h3>
+<p>Las principales <strong>fuentes de contaminación ambiental</strong> derivadas de las actividades de montaje y mantenimiento de redes locales son:</p>
+<ol>
+<li><strong>Residuos sólidos:</strong> restos de cables, conectores, bridas, canaletas, envoltorios de plástico, cartones.  </li>
+<li><strong>Residuos electrónicos:</strong> equipos obsoletos o averiados (routers, switches, PCs, fuentes de alimentación).  </li>
+<li><strong>Residuos metálicos:</strong> tornillos, grapas, conectores RJ45 o blindajes.  </li>
+<li><strong>Polvo y partículas:</strong> generadas por perforaciones o cortes en paredes y canaletas.  </li>
+<li><strong>Emisiones acústicas:</strong> ruido de taladros, compresores u otras herramientas eléctricas.  </li>
+<li><strong>Consumo energético:</strong> derivado del uso prolongado de equipos eléctricos y electrónicos.  </li>
+</ol>
+<p>El técnico debe ser consciente de que <strong>cada acción técnica tiene un impacto ambiental</strong> y adoptar medidas que lo reduzcan, tanto en el aula-taller como en el entorno profesional.</p>
+<h3 id="medidas-de-proteccion-ambiental-en-el-montaje-de-redes">Medidas de protección ambiental en el montaje de redes</h3>
+<p>La protección ambiental se aplica en todas las fases del trabajo: planificación, instalación, mantenimiento y desmontaje. A continuación se enumeran algunas medidas concretas adaptadas al ámbito de redes:</p>
+<h4 id="antes-del-montaje">Antes del montaje</h4>
+<ul>
+<li>Calcular con precisión los materiales necesarios para <strong>evitar desperdicios</strong>.  </li>
+<li>Utilizar <strong>cables y canaletas certificados</strong> y libres de halógenos (LSZH), que reducen la emisión de gases tóxicos.  </li>
+<li>Planificar la ubicación de racks y canalizaciones para <strong>minimizar obras o perforaciones</strong>.  </li>
+<li>Seleccionar equipos <strong>energéticamente eficientes</strong> (routers con modo ahorro, switches con apagado automático de puertos).</li>
+</ul>
+<h4 id="durante-el-montaje">Durante el montaje</h4>
+<ul>
+<li>Clasificar los restos de cable, plástico y metal en contenedores separados.  </li>
+<li>Evitar el uso de productos químicos o aerosoles innecesarios.  </li>
+<li>Apagar las herramientas eléctricas cuando no se estén utilizando.  </li>
+<li>Controlar la generación de polvo mediante aspiradores o paños húmedos.  </li>
+<li>Mantener el aula limpia para evitar acumulación de residuos.</li>
+</ul>
+<h4 id="despues-del-montaje">Después del montaje</h4>
+<ul>
+<li>Revisar los residuos generados y depositarlos en los contenedores adecuados.  </li>
+<li>Comprobar el apagado de todos los equipos.  </li>
+<li>Guardar los materiales sobrantes para futuras prácticas.  </li>
+<li>Entregar los equipos obsoletos al punto de recogida RAEE del centro o del municipio.  </li>
+</ul>
+<h3 id="clasificacion-y-gestion-de-residuos">Clasificación y gestión de residuos</h3>
+<p>La correcta <strong>clasificación de los residuos</strong> es la base de toda gestión ambiental. En un taller o empresa de redes locales se deben diferenciar al menos las siguientes categorías:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Tipo de residuo</strong></th>
+<th><strong>Ejemplo</strong></th>
+<th><strong>Gestión recomendada</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plásticos y envoltorios</strong></td>
+<td>Canaletas, bolsas, embalajes</td>
+<td>Contenedor amarillo</td>
+</tr>
+<tr>
+<td><strong>Metales</strong></td>
+<td>Conectores, grapas, tornillos</td>
+<td>Contenedor gris o punto limpio</td>
+</tr>
+<tr>
+<td><strong>Cables eléctricos o de red</strong></td>
+<td>Restos de cobre, blindajes</td>
+<td>Punto RAEE o reciclaje de metales</td>
+</tr>
+<tr>
+<td><strong>Equipos electrónicos</strong></td>
+<td>Routers, switches, fuentes de alimentación</td>
+<td>Punto limpio o gestor autorizado RAEE</td>
+</tr>
+<tr>
+<td><strong>Papel y cartón</strong></td>
+<td>Instrucciones, cajas</td>
+<td>Contenedor azul</td>
+</tr>
+<tr>
+<td><strong>Residuos peligrosos</strong></td>
+<td>Pilas, baterías, aerosoles limpiadores</td>
+<td>Punto limpio o gestor autorizado</td>
+</tr>
+<tr>
+<td><strong>Orgánicos</strong></td>
+<td>Restos no reciclables</td>
+<td>Contenedor marrón</td>
+</tr>
+</tbody>
+</table>
+<p>El almacenamiento temporal de los residuos debe hacerse en <strong>recipientes etiquetados y separados</strong>, evitando su mezcla o acumulación.</p>
+<h3 id="gestion-de-residuos-electricos-y-electronicos-raee">Gestión de residuos eléctricos y electrónicos (RAEE)</h3>
+<p>Los <strong>RAEE</strong> (Residuos de Aparatos Eléctricos y Electrónicos) son una categoría especial de desechos que incluyen routers, ordenadores, fuentes de alimentación, cables, monitores, etc. Estos equipos contienen <strong>metales pesados (plomo, mercurio, cadmio)</strong> y <strong>componentes contaminantes</strong>, por lo que su eliminación incorrecta puede dañar gravemente el medio ambiente.</p>
+<h4 id="procedimiento-de-gestion-de-raee">Procedimiento de gestión de RAEE</h4>
+<ol>
+<li><strong>Recogida selectiva:</strong> separar los equipos fuera de uso del resto de residuos.  </li>
+<li><strong>Almacenamiento seguro:</strong> mantenerlos en lugar seco, ventilado y protegido.  </li>
+<li><strong>Transporte a gestor autorizado:</strong> entregarlos a entidades certificadas o al punto limpio municipal.  </li>
+<li><strong>Desmontaje y reciclaje:</strong> recuperar materiales útiles (cobre, aluminio, plástico).  </li>
+<li><strong>Tratamiento y eliminación final:</strong> según la normativa vigente.  </li>
+</ol>
+<p>En los centros educativos, los RAEE generados durante las prácticas deben entregarse al <strong>servicio municipal de recogida</strong> o almacenarse temporalmente hasta su retirada, siguiendo las directrices del responsable ambiental del centro.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026 José María Pérez Puentes - Licencia CC BY-NC-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
